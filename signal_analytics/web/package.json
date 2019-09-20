@@ -1,0 +1,22 @@
+{
+  "name": "@bloom42/signal",
+  "version": "0.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "z0mbie42",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "uglify-js": "^3.4.9"
+  },
+  "homepage": "https://opensource.bloom.sh/signal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloom42/signal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bloom42/signal/issues"
+  }
+}
