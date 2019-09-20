@@ -1,0 +1,28 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: 'golang:1.11-stretch'
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - apt update && apt install -y make git
+    - make test
+
+build:
+  stage: build
+  image: 'golang:1.11-stretch'
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - apt update && apt install -y make git
+    - make
