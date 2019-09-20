@@ -1,0 +1,45 @@
+image: node:10-alpine
+
+variables:
+   GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - lint
+  - build
+  - deploy
+
+before_script:
+  - apk add --update make
+  - npm install
+
+lint:
+  stage: lint
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - make lint
+
+build:
+  stage: build
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - apk add python3
+    - pip3 install mkdocs
+    - make
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  image: node:10-alpine
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - npm config set unsafe-perm true
+    - npm install -g firebase-tools
+    - firebase deploy --token $FIREBASE_TOKEN

@@ -1,0 +1,9 @@
+[submodule "projects/sane"]
+	path = projects/sane
+	url = https://github.com/bloom42/sane
+[submodule "projects/rocket"]
+	path = projects/rocket
+	url = https://github.com/bloom42/rocket
+[submodule "projects/signal"]
+	path = projects/signal
+	url = https://github.com/bloom42/signal

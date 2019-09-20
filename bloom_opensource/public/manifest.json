@@ -1,0 +1,9 @@
+{
+  "name": "Bloom code",
+  "short_name": "Bloom code",
+  "icons": [],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
