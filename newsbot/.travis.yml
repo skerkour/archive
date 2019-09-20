@@ -1,0 +1,40 @@
+sudo: required
+
+services:
+  - docker
+
+language: go
+
+go:
+  - 1.11
+
+env:
+  - GO111MODULE=on
+
+git:
+  depth: false
+  submodules: false
+
+before_script:
+  - go get -u github.com/bloom42/flint
+  - go get -u github.com/bloom42/rocket
+  - go get
+  - make test
+
+script:
+  - make
+  - make docker
+
+before_deploy:
+  - export VERSION=$(cat version/version.go| grep "\sVersion" | cut -d '"' -f2) # for docker provider
+
+deploy:
+  provider: script
+  skip_cleanup: true # Important, otherwise the build output would be purged.
+  script: rocket # use rocket to deploy
+  on:
+    tags: true # The deployment happens only if the commit has a tag
+
+notifications:
+  email:
+    on_success: never

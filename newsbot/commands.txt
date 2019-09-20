@@ -1,0 +1,3 @@
+subscribe - Subscribe to two daily notifications
+unsubscribe - Unsubscribe
+help - Display help and subscription status

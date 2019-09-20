@@ -1,0 +1,14 @@
+description = "This is a configuration file for rocket: Deploy software as fast and easily as possible. See https://github.com/astrocorp42/rocket"
+
+github_releases = {}
+
+docker = {
+  images = [
+    "bloom42/newsbot:$VERSION",
+    "bloom42/newsbot:latest"
+  ]
+}
+
+#heroku = {
+#  app = "hnbot-production"
+#}
