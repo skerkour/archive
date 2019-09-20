@@ -1,0 +1,30 @@
+sudo: false
+
+language: go
+
+go:
+  - 1.11
+
+env:
+  - GO111MODULE=on
+
+git:
+  depth: false
+  submodules: false
+
+before_script:
+  - go get -u github.com/bloom42/rocket
+  - cd api && go get && cd ..
+
+script:
+  - make api
+
+deploy:
+  provider: script
+  script: make deploy_api
+  on:
+    tags: true # The deployment happens only if the commit has a tag
+
+notifications:
+  email:
+    on_success: never
