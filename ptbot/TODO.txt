@@ -1,0 +1,2 @@
+- handle bot reply errors
+- actuellement les dialogs sont par chatID, il vaudrait mieux qu'ils soient pas user, mais qu'on sauvegarde par chat (poureveiter que qqun foute la merde en parlant)

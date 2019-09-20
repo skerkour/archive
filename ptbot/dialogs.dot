@@ -1,0 +1,23 @@
+digraph fsm {
+    "initial" -> "initial" [ label = "cancel_called" ];
+    "initial" -> "asking_for_product_url" [ label = "subscribe_called" ];
+    "initial" -> "initial" [ label = "help_called" ];
+    "initial" -> "initial" [ label = "rm_called" ];
+    "initial" -> "initial" [ label = "ls_called" ];
+    "asking_for_subscription_type" -> "initial" [ label = "cancel_called" ];
+    "asking_for_subscription_type" -> "asking_for_webhook_url" [ label = "both_chosen" ];
+    "asking_for_subscription_type" -> "initial" [ label = "subscription_type_is_not_valid" ];
+    "asking_for_webhook_url" -> "initial" [ label = "webhook_url_sent" ];
+    "asking_for_product_url" -> "asking_for_subscription_type" [ label = "product_url_is_valid" ];
+    "asking_for_subscription_type" -> "initial" [ label = "notification_chosen" ];
+    "asking_for_webhook_url" -> "initial" [ label = "cancel_called" ];
+    "asking_for_subscription_type" -> "asking_for_webhook_url" [ label = "webhook_chosen" ];
+    "asking_for_product_url" -> "initial" [ label = "cancel_called" ];
+    "asking_for_product_url" -> "initial" [ label = "product_url_is_not_valid" ];
+
+    "initial";
+    "asking_for_product_url";
+    "asking_for_subscription_type";
+    "asking_for_webhook_url";
+}
+

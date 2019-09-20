@@ -1,0 +1,101 @@
+{
+	"ImportPath": "gitlab.com/z0mbie42/ptbot",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/PuerkitoBio/goquery",
+			"Comment": "v1.4.1",
+			"Rev": "dc2ec5c7ca4d9aae063b79b9f581dd3ea6afd2b2"
+		},
+		{
+			"ImportPath": "github.com/andybalholm/cascadia",
+			"Comment": "v1.0.0",
+			"Rev": "901648c87902174f774fac311d7f176f8647bdaa"
+		},
+		{
+			"ImportPath": "github.com/go-telegram-bot-api/telegram-bot-api",
+			"Comment": "v4.6.2-6-g4c16a90",
+			"Rev": "4c16a90966d12d963e19e4df99e7744c191d0e79"
+		},
+		{
+			"ImportPath": "github.com/google/uuid",
+			"Comment": "0.2-21-gdec09d7",
+			"Rev": "dec09d789f3dba190787f8b4454c7d3c936fed9e"
+		},
+		{
+			"ImportPath": "github.com/imroc/req",
+			"Comment": "v0.1.9-1-gb02e5d1",
+			"Rev": "b02e5d142b5043456f0420df2ca3b652116fb6d1"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/gorm",
+			"Comment": "v1.9.1-7-g82eb9f8",
+			"Rev": "82eb9f8a5bbb5e6b929d2f0ae5b934e6a253f94e"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/gorm/dialects/postgres",
+			"Comment": "v1.9.1-7-g82eb9f8",
+			"Rev": "82eb9f8a5bbb5e6b929d2f0ae5b934e6a253f94e"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/inflection",
+			"Rev": "04140366298a54a039076d798123ffa108fff46c"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Comment": "v1.2.0-12-g1709ab1",
+			"Rev": "1709ab122c988931ad53508747b3c061400c2984"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-212-g90697d6",
+			"Rev": "90697d60dd844d5ef6ff15135d0203f65d2f53b8"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/hstore",
+			"Comment": "go1.0-cutoff-212-g90697d6",
+			"Rev": "90697d60dd844d5ef6ff15135d0203f65d2f53b8"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/oid",
+			"Comment": "go1.0-cutoff-212-g90697d6",
+			"Rev": "90697d60dd844d5ef6ff15135d0203f65d2f53b8"
+		},
+		{
+			"ImportPath": "github.com/looplab/fsm",
+			"Rev": "f980bdb68a8962823200eafe6c0aa99e917be0d7"
+		},
+		{
+			"ImportPath": "github.com/pkg/errors",
+			"Comment": "v0.8.0-12-g816c908",
+			"Rev": "816c9085562cd7ee03e7f8188a1cfd942858cded"
+		},
+		{
+			"ImportPath": "github.com/technoweenie/multipartstreamer",
+			"Comment": "v1.0.1",
+			"Rev": "a90a01d73ae432e2611d178c18367fbaa13e0154"
+		},
+		{
+			"ImportPath": "github.com/tucnak/telebot",
+			"Comment": "ver2.0-31-g743778f",
+			"Rev": "743778f69e925ca80651235174e188793e7ed653"
+		},
+		{
+			"ImportPath": "github.com/z0mbie42/goes",
+			"Comment": "v0.2.3-2-gad1a0ad",
+			"Rev": "ad1a0ad954589cc9a885851eb7d0179e48d41417"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/atom",
+			"Rev": "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
+		}
+	]
+}

@@ -1,0 +1,5 @@
+subscribe - Start tracking the price of a product
+ls - List subscriptions
+delete - Delete subscription
+cancel - Cancel the current opreation
+help - Display help
