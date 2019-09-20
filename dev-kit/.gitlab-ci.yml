@@ -1,0 +1,34 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+
+stages:
+  - build
+  - release
+
+
+build:
+  stage: build
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - apk update && apk add make
+    - make docker
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - make docker_push
+
+
+release:
+  stage: release
+  only:
+    - tags
+  tags:
+    - docker
+    - bloom42cicd
+  script:
+    - apk update && apk add make
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - make docker_release

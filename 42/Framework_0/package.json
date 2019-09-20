@@ -1,0 +1,54 @@
+{
+  "name": "framwork_0",
+  "version": "0.0.42",
+  "description": "A simple web project",
+  "main": "target/bin/index.js",
+  "scripts": {
+	"start": "node node_modules/nodemon/bin/nodemon.js target/bin/index.js",
+    "launch": "npm i -d && bower i && gulp build && nodemon target/bin/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/z0mbie42/42.git"
+  },
+  "author": "z0mbie42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z0mbie42/42/issues"
+  },
+  "homepage": "https://github.com/z0mbie42/42#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "compression": "^1.6.0",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.5.4",
+    "lodash": "^3.10.1",
+    "mailgun-js": "^0.7.7",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.0",
+    "node-uuid": "^1.4.7",
+    "orm": "^2.1.29"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "bower": "^1.7.7",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uglifycss": "^1.0.5",
+    "nodemon": "^1.9.0",
+    "run-sequence": "^1.1.5"
+  }
+}

@@ -1,0 +1,6 @@
+[package]
+name = "bfuck"
+version = "0.42.0"
+authors = ["z0mbie42"]
+
+[dependencies]

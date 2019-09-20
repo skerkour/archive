@@ -1,0 +1,24 @@
+div#lol-admin
+div.row  
+  div.col-md-8.col-md-offset-2
+    uib-alert(ng-if="adminError" type="danger" close="closeAdminError()") {{ adminError.informations }}
+    input.form-control(type="text" ng-model="osef" uib-typeahead="user.username for user in users | limitTo:8" typeahead-on-select="onSearchSelect($item, $model, $label)")
+    table.table.table-striped.table-hover.table-condensed.table-bordered
+      tr
+        th #
+        th Username
+        th Email
+        th First name
+        th LastName
+        th Created at
+        th Role
+        th Actions
+      tr.pointr(ng-repeat="user in users" ng-click="go('/admin/users/'+user.id)")
+        td {{ user.id }}
+        td {{ user.username }}
+        td {{ user.email }}
+        td {{ user.firstName }}
+        td {{ user.lastname }}
+        td {{ user.createdAt }}
+        td {{ user.isAdmin ? 'Admin' : 'User' }}
+        td

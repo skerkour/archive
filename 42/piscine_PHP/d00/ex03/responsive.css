@@ -1,0 +1,52 @@
+td {
+	border: 2px solid;
+	border-radius: 3px;
+}
+body {
+	font-size: 1vh;
+}
+.mass {
+	vertical-align: top;
+}
+.num {
+	vertical-align: bottom;
+}
+.non-metaux {
+	background-color: LightGreen;
+}
+.metaux-alcalins {
+	background-color: Crimson;
+}
+.gaz-nobles {
+	background-color: LightCyan;
+}
+.alcalino-terreux {
+	background-color: AntiqueWhite;
+}
+.metaux-transition {
+	background-color: pink;
+}
+.halogenes {
+	background-color: LemonChiffon;
+}
+.metalloides {
+	background-color: DarkSeaGreen;
+}
+.metaux-pauvres {
+	background-color: LightGray;
+}
+.lanthanides {
+	background-color: HotPink;
+}
+.actinides {
+	background-color: IndianRed ;
+}
+.void {
+	border: none;
+}
+.dotted {
+	border-style: dotted;
+}
+.dashed {
+	border-style: dashed;
+}

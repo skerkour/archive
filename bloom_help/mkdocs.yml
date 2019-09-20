@@ -1,0 +1,26 @@
+docs_dir: pages
+
+theme:
+  name: null
+  custom_dir: 'themes/mkdocs-material/material'
+  language: en
+  feature:
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: https://bloom.sh/favicon.ico
+  logo:
+    icon: "\uE80C"
+  base_url: '/'
+
+site_name: Bloom Help & Support
+site_url: https://help.bloom.sh/
+repo_url: https://github.com/bloom42/help
+edit_uri: https://github.com/bloom42/help/edit/master/pages/
+site_dir: dist/
+
+nav:
+  - index.md

@@ -1,0 +1,36 @@
+
+<- Matrix ----------------------------------------------------------------------
+
+constantest statiques :
+	- IDENTITY
+	- SCALE
+	- RX
+	- RY
+	- RZ
+	- TRANSLATION
+	- PROJECTION
+
+Le constructeur de la classe attend un tableau. Les clefs attendues sont les
+suivantes :
+	'preset' : type de matrice à construire, obligatoire. La valeur doit être
+		l’une des constantes de classe précédentes.
+	'scale' : le facteur d’échelle, obligatoire quand ’preset’ vaut SCALE.
+	'angle' : angle de rotation en radians, obligatoire quand ’preset’ vaut RX,
+		RY ou RZ.
+	'vtc' : vecteur de translation, obligatoire quand ’preset’ vaut TRANSLATION.
+	'fov' : champs de vision de la projection en degrés, obligatoire quand
+		’preset’ vaut PROJECTION.
+	'ratio' : ratio de l’image projetée, obligatoire quand ’preset’ vaut
+		PROJECTION.
+	'near' : plan de clipping proche de la projection, obligatoire quand
+		’preset’ vaut PROJECTION.
+	'far' : plan de clipping éloigné de la projection, obligatoire quand
+		’preset’ vaut PROJECTION.
+
+la classe implémentes les méthides suivantes :
+	mult( Matrix $rhs ) : retourne une nouvelle matrice résulat de la mul-
+		tiplication des deux matrices.
+	transformVertex( Vertex $vtx ) : retourne un nouveau vertex résul-
+		tat de la transformation du vertex par la matrice.
+
+---------------------------------------------------------------------- Matrix ->

@@ -1,0 +1,4 @@
+target/
+avm
+tests/test
+tests/test.dSYM/

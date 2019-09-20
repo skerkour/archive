@@ -1,0 +1,29 @@
+language: go
+
+os:
+  - linux
+  - osx
+
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-5
+
+env:
+  global:
+    - COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
+    - ABSTRACT_VM_DIR=./Abstract_VM
+    - COMPUTORV1_DIR=./ComputorV1
+
+install:
+  - go get -t $COMPUTORV1_DIR
+
+script:
+  - go test $COMPUTORV1_DIR -v
+  - make -C Abstract_VM test
+
+notifications:
+  email: false

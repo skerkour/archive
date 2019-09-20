@@ -1,0 +1,3 @@
+/etc/hosts
+ce fichier contient des tuples (ip, hostname), on peut le modifier pour
+'overwrite' la resolution de DN.

@@ -1,0 +1,76 @@
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+
+a {
+	color: #FFF;
+}
+
+#container {
+	max-width: 340px;
+}
+
+p {
+	text-align: center;
+}
+
+nav ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #64B5F6;
+}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: #BBDEFB; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px;
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:184px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:184px;
+}
+
+li > a:after {
+	content:  ' >';
+}
+li > a:only-child:after {
+	content: '';
+}

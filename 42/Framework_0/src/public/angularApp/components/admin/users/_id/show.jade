@@ -1,0 +1,56 @@
+uib-alert(ng-if="adminError" type="danger" close="closeAdminError()") {{ adminError.informations }}
+uib-alert(ng-if="adminSuccess" type="success" close="closeAdminSuccess()") {{ adminSuccess.informations }}
+.container
+      .row
+        .col-md-5.col-md-offset-3
+          button.btn(ng-click="go('/admin/users')") Back
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad
+          .panel.panel-info
+            .panel-heading
+              h3.panel-title {{ user.username }}
+            .panel-body
+              .row
+                .col-md-3.col-lg-3(align='center')
+                  img.img-circle.img-responsive(alt='User Pic', src="//ssl.gstatic.com/accounts/ui/avatar_2x.png")
+                .col-md-9.col-lg-9
+                  table.table.table-user-information
+                    tbody
+                      tr
+                        td: b Id:
+                        td {{ user.id }}
+                      tr
+                        td: b Email:
+                        td: a(href="mailto:{{ user.email }}" target="_blank") {{ user.email }}
+                      tr
+                        td: b First name:
+                        td {{ user.firstName }}
+                      tr
+                        td: b Last name:
+                        td {{ user.lastName }}
+                      tr
+                        td: b Created at:
+                        td {{ user.createdAt }}
+                      tr
+                        td: b Role:
+                        td {{ user.isAdmin ? 'Admin' : 'User' }}
+            .panel-footer
+              button.btn.btn-sm.btn-primary(title="Send Message" ng-click="openEmailModal()")
+                i.glyphicon.glyphicon-envelope
+              span.pull-right
+                button.btn.btn-sm.btn-warning(ng-click="goToEdit()" title="Edit")
+                  i.glyphicon.glyphicon-edit
+                button.btn.btn-sm.btn-danger(title="Delete" ng-click="deleteUser()")
+                  i.glyphicon.glyphicon-remove
+
+script(type="text/ng-template" id="emailModal.html")
+  div.modal-body
+    div.form-group
+      label(for="email-subject") Subject :
+      input.form-control(type="text" ng-model="emailSubject" placeholder="Subject")
+    div.form-group
+      label(for="email-text") Content :
+      textarea.form-control(rows="21" id="email-text" placeholder="Content" ng-model="emailBody")
+  div.modal-footer
+    span.pull-right
+      button.btn.btn-primary(title="Send" ng-click="sendEmail()")
+        i.fa.fa-check.fa-w

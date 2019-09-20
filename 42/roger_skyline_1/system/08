@@ -1,0 +1,3 @@
+le fichier $HOME/.ssh/authorized_keys
+
+(definit dans /etc/ssh/sshd_config, #AuthorizedKeysFile	%h/.ssh/authorized_keys)

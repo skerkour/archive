@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Day of the 42</title>
+	<link rel="stylesheet" type="text/css" href="scumm.css">
+</head>
+<body>
+	<div class="menu" id="menu-top">
+		<a href="scumm.html"><img id="img-day" src="resources/day_of_the_42.png" alt="day_of_the_42" title="day_of_the_42"/></a>
+		<img id="img-loupe" src="resources/loupe.png" alt="" title="" />
+		<a href="http://www.relaischateaux.com"><img id="img-close" src="resources/close.gif" alt="Déconnecter" title="Déconnecter" height="22" width="22"/></a>
+		<a id="img-reload" href="http://www.disney.com"><img src="resources/reload.png" alt="Recommencer au début" title="Recommencer au début" height="22" width="22"/></a>
+	</div>
+	<div class="menu" id="menu-left">
+		<img class="img-border img-left" src="resources/arrow.png" alt="Avancer" title="Avancer"/>
+		<img class="img-border img-left" src="resources/main.png" alt="Prendre" title="Prendre"/>
+		<img id="img-oeil" class="img-border img-left" src="resources/oeil.png" alt="Regarder" title="Regarder"/>
+		<img class="img-border img-left" src="resources/outil.png" alt="Utiliser" title="Utiliser"/>
+		<img class="img-border img-left" src="resources/chat-icon.png" alt="Parler" title="Parler"/>
+	</div>
+	<div class="menu" id="menu-center">
+		<img style="width: 1044px; height: 675px;" id="img-cluster2" src="resources/eric-cartman-.png"/>
+	</div>
+	<div class="menu" id="menu-right">
+		<img id="img-book"class="img-border" src="resources/book.png" />
+		<img id="img-towel" class="img-border" src="resources/towel.png" />
+		<div id="img-wall" class="img-border"> </div>
+	</div>
+	<div class="form">
+		<p style="font-family: Arial;">
+			S'il te plait, aide moi ā dominer le monde !
+		</p>
+		<div style="padding-bottom: 70px; padding-right: 34px;">
+			<input style="border: 1px solid #aaa; box-shadow: 1px 1px 1px #777 inset; height: 18px;" type="text" size="70" id="respponse"/>
+			<button style="margin-left: 6px; border: 1px solid #aaa; border-radius: 2px; background: linear-gradient(#eee, #ddd); height: 22px; " onClick="chooseYourWay();" >Repondre</button>
+		</div>
+	</div>
+	<script>
+		function chooseYourWay () {
+			var resp = document.getElementById("respponse").value || '';
+			if (resp.indexOf('yes') > -1) {
+				window.location.replace("3.html");
+			} else {
+				window.location.replace("end.html");
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

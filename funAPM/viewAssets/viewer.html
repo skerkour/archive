@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./viewAssets/d3-timeline.js"></script>
+
+    <style type="text/css">
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+
+        .axis text {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        .timeline-label {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        #timeline2 .axis {
+            transform: translate(0px,40px);
+            -ms-transform: translate(0px,40px); /* IE 9 */
+            -webkit-transform: translate(0px,40px); /* Safari and Chrome */
+            -o-transform: translate(0px,40px); /* Opera */
+            -moz-transform: translate(0px,40px); /* Firefox */
+        }
+
+        .coloredDiv {
+            height:20px; width:20px; float:left;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var width = 990;
+        var convertData = function (line) {
+
+            var results = [];
+            results.push({ label: 'request', times: [{"starting_time": line.startTime, "ending_time": line.startTime + line.duration}]});
+            for (var i = 0; i < line.actions.length; ++i) {
+                var act = line.actions[i];
+                results.unshift({ label: act.name, times: [{"starting_time": act.startTime, "ending_time": act.startTime + act.duration}]});
+            }
+            return results;
+        };
+
+        var input = [];
+
+        function drawRequest(inputs) {
+            var chart = d3.timeline()
+                .showTimeAxis()
+                .width(width)
+                .stack()
+                .beginning(inputs.startTime) // we can optionally add beginning and ending times to speed up rendering a little
+                .ending(inputs.startTime + inputs.duration)
+                .margin({left:100, right:30, top:0, bottom:0});
+
+            d3.select('#main').append('div').attr('id', 'id' + inputs.uuid);
+            d3.select("#id"  + inputs.uuid).append('h3').text(inputs.method + ' ' + inputs.url + ' ' + inputs.startDate);
+            d3.select("#id" + inputs.uuid).append("svg").attr("width", width)
+                .datum(convertData(inputs))
+                .call(chart);
+        }
+
+        window.onload = function() {
+
+            for (var i = 0; i < input.length; ++i) {
+                if (input[i] !== null) {
+                    drawRequest(input[i]);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="main">
+</div>
+</body>
+</html>

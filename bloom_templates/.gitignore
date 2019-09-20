@@ -1,0 +1,15 @@
+# THIS IS NOT THE TEMPLATE, SEE THE `git` DIRECTORY
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+npm-debug.log*
+
+.env
+.DS_Store
+Thumbs.db

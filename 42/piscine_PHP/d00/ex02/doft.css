@@ -1,0 +1,127 @@
+body {
+	background-color: rgb(81, 81, 81);
+}
+
+.menu {
+	background-color: rgb(144, 144, 144);
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px;
+}
+
+.form {
+	background-color: rgb(136, 255, 137);
+	border-radius: 10px;
+	border: 1px solid black;
+	z-index: 999;
+	margin-top: -110px;
+	position: absolute;
+	margin-left: 10%;
+	padding-left: 8px;
+	box-shadow: 10px 10px 10px;
+}
+
+#menu-top {
+	height: 161px;
+	margin-top: 20px;
+	margin-left: 12%;
+	margin-right: 12%;
+}
+
+#menu-left {
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 14%;
+	width: 150px;
+	vertical-align: top;
+	height: 540px;
+}
+
+#menu-center {
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 32px;
+	margin-right: 32px;
+	vertical-align: top;
+}
+
+#menu-right {
+	display: inline-block;
+	margin-top: 20px;
+	width: 150px;
+	vertical-align: top;
+	height: 540px;
+	margin-right: 14%;
+}
+
+.img-border {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.img-left {
+	width: 92px;
+	height: 92px;
+	margin-top: 10px;
+}
+
+#img-day {
+	padding: 5px;
+	height: 85%;
+}
+
+#img-loupe {
+	width: 13.6%;
+	height: 160px;
+	margin-top: 24px;
+	position: absolute;
+	margin-right: 18%;
+	right: -4%;
+}
+
+#img-close {
+	vertical-align: bottom;
+	margin-left: auto;
+	position: absolute;
+	right: 13%;
+	top: 150px;
+}
+
+#img-reload {
+	vertical-align: top;
+	right: 13%;
+	margin-top: 10px;
+	margin-left: auto;
+	position: absolute;
+}
+
+#img-cluster {
+	padding: 10px;
+}
+
+#img-wall {
+	width: 120px;
+	height: 70px;
+	background-image: url("resources/brick.jpg");
+	background-repeat: repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img-book {
+	margin-top: 25px;
+	width: 95px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img-towel {
+	width: 72px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img-oeil {
+	border: 6px solid red;
+	border-radius: 5px;
+}

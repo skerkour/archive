@@ -1,0 +1,26 @@
+{
+  "name": "framwork_0",
+  "description": "A simple web project",
+  "main": "target/bin/main.js",
+  "authors": [
+    "z0mbie42"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/z0mbie42/42",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "nprogress": "~0.2.0",
+    "angular-cookie": "~4.0.9",
+    "angular-route": "~1.4.8",
+    "components-font-awesome": "~4.5.0",
+    "restangular": "~1.5.1",
+    "lodash": "~3.10.1",
+    "bootstrap": "~3.3.6",
+    "angular-bootstrap": "~0.14.3"
+  }
+}

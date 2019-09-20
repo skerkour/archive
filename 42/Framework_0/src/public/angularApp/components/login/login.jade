@@ -1,0 +1,15 @@
+div.container
+  div.card.card-container
+    uib-alert(ng-if="errorOnLogin" type="danger" close="closeAlertErrorOnLogin()") {{errorOnLogin.informations}}
+    img#profile-img.profile-img-card(src='//ssl.gstatic.com/accounts/ui/avatar_2x.png')
+    p#profile-name.profile-name-card
+    form.form-signin
+      input#register-username.form-control(type='text' placeholder='username' required autofocus='' name='username' ng-model='username')
+      input#register-password.form-control(type='password' placeholder='Password' required ng-model='password')
+      #remember.checkbox
+        label
+          input(type='checkbox' checked)
+          |  Remember me
+      button.btn-login.btn-lg.btn-primary.btn-block.btn-signin(type='submit' ng-click='sendLoginRequest()') Sign in
+      a.forgot-password(href='#/')
+        | Forgot the password?

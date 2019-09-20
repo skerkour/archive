@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Day of the 42</title>
+	<link rel="stylesheet" type="text/css" href="scumm.css">
+</head>
+<body>
+	<div class="menu" id="menu-top">
+	<a href="scumm.html"><img id="img-day" src="resources/day_of_the_42.png" alt="day_of_the_42" title="day_of_the_42"/></a>
+		<img id="img-loupe" src="resources/loupe.png" alt="" title="" />
+		<a href="http://www.relaischateaux.com"><img id="img-close" src="resources/close.gif" alt="Déconnecter" title="Déconnecter" height="22" width="22"/></a>
+		<a id="img-reload" href="http://www.disney.com"><img src="resources/reload.png" alt="Recommencer au début" title="Recommencer au début" height="22" width="22"/></a>
+	</div>
+	<div class="menu" id="menu-left">
+		<img class="img-border img-left" src="resources/arrow.png" alt="Avancer" title="Avancer"/>
+		<img class="img-border img-left" src="resources/main.png" alt="Prendre" title="Prendre"/>
+		<img class="img-border img-left" src="resources/outil.png" alt="Utiliser" title="Utiliser"/>
+		<img class="img-border img-left" src="resources/chat-icon.png" alt="Parler" title="Parler"/>
+	</div>
+	<div class="menu" id="menu-center">
+		<img style="width: 1044px; height: 675px;" id="img-cluster2" src="resources/risk-colored-small.jpg"/>
+	</div>
+	<div class="menu" id="menu-right">
+		<div id="drag1" class="drag-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img id="img-book"class="img-border" src="resources/book.png" draggable="true" ondragstart="drag(event)" id="dragi1" />
+		</div>
+		<div id="drag1" class="drag-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img id="img-towel" class="img-border" src="resources/towel.png" draggable="true" ondragstart="drag(event)" id="dragi2" />
+		</div>
+		<div id="drag1" class="drag-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img id="img-oeil" class="img-border img-left" src="resources/oeil.png" alt="Regarder" title="Regarder" draggable="true" ondragstart="drag(event)" id="dragi3"/>
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:100%; height: 130px;border: 1px solid black; margin-left: -500px;"></div>
+		<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:100%; height: 130px;border: 1px solid black; margin-left: -600px;margin-top:-300px;"></div>
+		<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:100%; height: 130px;border: 1px solid black; margin-left: -750px;"></div>
+	</div>
+	<script>
+		var counter = 0;
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		++counter;
+		if (counter === 3)
+			window.location.replace("win.html");}
+	</script>
+</body>
+</html>

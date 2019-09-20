@@ -1,0 +1,7 @@
+sudo bash <<EOF
+apt-get update >> /var/log/update_script.log
+apt-get dist-upgrade -y >> /var/log/update_script.log
+apt-get upgrade -y >> /var/log/update_script.log
+EOF
+
+# 0 4 * * 6 /script.sh

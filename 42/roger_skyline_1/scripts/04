@@ -1,0 +1,8 @@
+ORIGINAL_MD5="8f111d100ea459f68d333d63a8ef2205"
+
+if [ $(md5sum /etc/crontab | cut -d' ' -f1) != "$ORIGINAL_MD5" ]
+then
+echo "crontab file modified" | mail -s "crontab file modified" root;
+fi
+
+# 0 0 * * * /script.sh

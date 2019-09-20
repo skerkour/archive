@@ -1,0 +1,268 @@
+{
+// version expression formatter
+// will try to translate expressions in a semver version or version range
+// compatible one, like this :
+// 1.0.rc.1             --> 1.0.0-rc.1
+// <0.8                 --> <0.8.0
+// ^5 || <=5.0-beta     --> ^5.0.0 || <=5.0.0-beta
+package versionformatter
+
+import (
+  log "github.com/sirupsen/logrus"
+)
+
+func Format(expression string, opts ...Option) (string, error) {
+  got, err := ParseReader("", strings.NewReader(expression), opts...)
+  if err != nil {
+    log.Info("👮 In '"+ expression + "':\n", err)
+    return "", err
+  }
+  return got.(string), err
+}
+
+func toIfaceSlice(v interface{}) []interface{} {
+  if v == nil {
+      return nil
+  }
+  return v.([]interface{})
+}
+}
+
+Input <- _ expr:(ExpressionList / Expression) _ EOF {
+  log.Debug("👮 Input", expr.(string))
+  return expr.(string), nil
+}
+
+ExpressionList <- head:Expression tail:(ExpressionSubList)+ {
+  if(tail == nil) {
+    return head, nil
+  }
+  tailSl := toIfaceSlice(tail)
+  res := head.(string)
+  for _, part := range tailSl {
+    res += part.(string)
+  }
+  log.Debug("👮 ExpressionList", res)
+  return res, nil
+}
+
+ExpressionSubList <- separator:ExpressionSeparator expr:Expression {
+  res := separator.(string) + expr.(string)
+  log.Debug("👮 ExpressionSubList", res)
+  return res, nil
+}
+
+Expression <- expr:(Range / SimpleExpression) {
+  res := expr.(string)
+  log.Debug("👮 Expression", res)
+  return res, nil
+}
+
+ExpressionSeparator <- (MandatoryWhiteSpace "||" MandatoryWhiteSpace /
+                       MandatoryWhiteSpace "," MandatoryWhiteSpace /
+                       MandatoryWhiteSpace "|" MandatoryWhiteSpace /
+                       MandatoryWhiteSpace "||" /
+                       MandatoryWhiteSpace "," /
+                       MandatoryWhiteSpace "|" /
+                       "||" MandatoryWhiteSpace /
+                       "," MandatoryWhiteSpace /
+                       "|" MandatoryWhiteSpace /
+                       "||" /
+                       "," /
+                       "|" /
+                       MandatoryWhiteSpace) {
+  log.Debug("👮 ExpressionSeparator", string(c.text), "👉 ||")
+  return " || ", nil
+}
+
+Range <- PrimitiveRange / HyphenRange / TildeRange / CaretRange / XRange
+
+PrimitiveRange <- (startop:StartRangeOperator start:Version s:InRangeSeparator endop:EndRangeOperator end:Version) {
+  res := string(startop.([]uint8)) + start.(string) + ", " + string(endop.([]uint8)) + end.(string)
+  log.Debug("👮 PrimitiveRange", res)
+  return res, nil
+} / (startop:EndRangeOperator start:Version s:InRangeSeparator endop:StartRangeOperator end:Version) {
+  res := string(endop.([]uint8)) + end.(string) + ", " + string(startop.([]uint8)) + start.(string)
+  log.Debug("👮 Reversed PrimitiveRange", res)
+  return res, nil
+}
+
+StartRangeOperator <- ">=" / ">"
+
+EndRangeOperator <- "<=" / "<"
+
+InRangeSeparator <- MandatoryWhiteSpace "," MandatoryWhiteSpace /
+                    MandatoryWhiteSpace "|" MandatoryWhiteSpace /
+                    MandatoryWhiteSpace "," /
+                    MandatoryWhiteSpace "|" /
+                    "," MandatoryWhiteSpace /
+                    "|" MandatoryWhiteSpace /
+                    "," /
+                    "|" /
+                    MandatoryWhiteSpace {
+  log.Debug("👮 InRangeSeparator", string(c.text), "👉 \" \"")
+  return string(", "), nil
+}
+
+HyphenOperator <- MandatoryWhiteSpace "-" MandatoryWhiteSpace /
+                  MandatoryWhiteSpace "-" /
+                  "-" MandatoryWhiteSpace /
+                  "-"
+
+HyphenRange <- (start:Version HyphenOperator end:Version) {
+ var res = start.(string) + " - " + end.(string)
+ log.Debug("👮 HyphenRange", res)
+ return res, nil
+}
+
+XRange <- version:Version {
+ var res = version.(string)
+ log.Debug("👮 XRange", res)
+ return res, nil
+}
+
+TildeRange <- ("~" version:Version) {
+ var res = "~" + version.(string)
+ log.Debug("👮 TildeRange", res)
+ return res, nil
+}
+
+CaretRange <- ("^" version:Version) {
+ var res = "^" + version.(string)
+ log.Debug("👮 CaretRange", res)
+ return res, nil
+}
+
+SimpleExpression <- expr:UnaryAndVersion {
+  log.Debug("👮 SimpleExpression", expr.(string))
+  return expr.(string), nil
+}
+
+UnaryAndVersion <- unary:OptionalUnary _ version:Version {
+  return unary.(string) + version.(string), nil
+}
+
+OptionalUnary <- op:UnaryOperator? {
+  if(op == nil) {
+    return "", nil
+  }
+  return op.(string), nil
+}
+
+Version <- head:Major tail:OptionalMinorPatchPreRelease {
+  log.Debug("👮 major", head)
+  version := head.(string) + tail.(string)
+  log.Debug("👮 whole version:", version)
+  return version, nil
+}
+
+Major <- VersionPart
+
+OptionalMinorPatchPreRelease <- head:OptionalDotMinor tail:OptionalPatchPreRelease {
+  return head.(string) + tail.(string), nil
+}
+
+OptionalDotMinor <- minor:DotVersionPart? {
+  if(minor == nil) {
+    return ".0", nil
+  }
+  log.Debug("👮 minor", minor)
+  return minor.(string), nil
+}
+
+Minor <- VersionPart
+
+OptionalPatchPreRelease <- head:OptionalDotPatch tail:OptionalPreRelease {
+  if(head == nil) {
+    return ".0" + tail.(string), nil
+  }
+  log.Debug("👮 patch", head)
+  return head.(string) + tail.(string), nil
+
+}
+
+OptionalDotPatch <- patch:DotVersionPart? {
+  if(patch == nil) {
+    return ".0", nil
+  }
+  return patch.(string), nil
+}
+
+DotVersionPart <- Dot n:VersionPart {
+  if(n == nil) {
+    return ".0", nil
+  }
+  return "." + n.(string), nil
+}
+
+Patch <- VersionPart
+
+OptionalPreRelease <- (Dash/Dot/Plus)? prerelease:PreRelease? {
+  if(prerelease == nil) {
+    return "", nil
+  }
+  log.Debug("👮 prerelease", prerelease)
+  if(prerelease.(string) == "") {
+    return "", nil
+  }
+  return "-" + prerelease.(string), nil
+}
+
+PreRelease <- PreReleaseContent* {
+  return string(c.text), nil
+}
+
+PreReleaseContent <- VersionPart / Word / Dot / Dash / Plus
+
+Dot "." <- [.] {
+  return ".", nil
+}
+
+Dash "-" <- [-] {
+  return "-", nil
+}
+
+Plus "+" <- [+] {
+  return "+", nil
+}
+
+Word <- [a-zA-Z]+ {
+  return string(c.text), nil
+}
+
+VersionPart <- Wildcard / Number
+
+Wildcard <- wildcard:("x" / "X" / "*") {
+  return string(wildcard.([]uint8)), nil
+}
+
+Number "number" <- [0-9]+ {
+  var value = string(c.text)
+  i, err := strconv.ParseInt(value, 10, 64)
+  if err != nil {
+    log.Print("Could not translate '", value, "' in 64bit int, will use original value")
+    return value, nil
+  }
+
+  return strconv.FormatInt(i, 10), nil
+}
+
+Comparator <- ">=" / "<=" / "<" / ">" / "=" {
+  log.Debug("👮 Comparator", c.text)
+  return string(c.text), nil
+}
+
+UnaryOperator "unary" <- op:("!=" / "==" /"<=" / ">=" / "<" / ">" / "=" / "!" )? {
+  if(op == nil) {
+    return "", nil
+  }
+  return string(op.([]uint8)), nil
+}
+
+MandatoryWhiteSpace "mandatory whitespace" <- [ \t\n\r]+ {
+  return string(" "), nil
+}
+
+_ "whitespace" <- [ \t\n\r]*
+
+EOF <- !.

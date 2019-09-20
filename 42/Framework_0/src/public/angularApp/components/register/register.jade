@@ -1,0 +1,13 @@
+div.container
+  div.card.card-container
+    uib-alert(ng-if="errorOnRegister" type="danger" close="closeAlertErrorOnRegister()") {{errorOnRegister.informations}}
+    form.form-signin
+      span#reauth-email.reauth-email
+      input#register-username.form-control(type='text' placeholder='Username' required='' autofocus='' name='username' ng-model='username')
+      input#register-email.form-control(type='email' placeholder='Email address' required='' autofocus='' name='email' ng-model='email')
+      input#register-password.form-control(type='password' placeholder='Password' required='' name='password' ng-model='password')
+      #remember.checkbox
+        label
+          input(type='checkbox' checked)
+          |  Remember me
+      button.btn-login.btn-lg.btn-primary.btn-block.btn-signin.pointr(type='submit' ng-click='sendRegistrationRequest()') Log in

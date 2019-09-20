@@ -1,0 +1,14 @@
+breakpoint set -o -l 18
+breakpoint set -p "std::cin|tmp /= max|return biggest"
+process continue
+expression -- $rsi -= 4
+process continue
+process continue
+expression -- $rsi += 4
+process continue
+expression -- count = 0
+process continue
+expression -- tmp = min[0] + min[1] + min[2]
+process continue
+expression -- biggest = (min[0] >= min[1] ? (min[0] >= min[2] ? min[0] : min[2]) : (min[1] >= min[2] ? min[1] : min[2]))
+process continue

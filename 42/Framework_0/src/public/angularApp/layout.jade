@@ -1,0 +1,40 @@
+doctype html
+html(lang="en" ng-app="fmw0")
+  head
+    title
+
+    //- indication for the angular location provider
+    base(href="/")
+
+    //- standard meta
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="mobile-web-app-capable" content="yes")
+
+    //- NProgress
+    link(rel="stylesheet" type="text/css" href="/assets/vendors/nprogress/nprogress.css")
+    script(src="/assets/vendors/nprogress/nprogress.js")
+    script.
+      NProgress.configure({ showSpinner: false });
+      NProgress.start();
+
+    //- vendors css
+    link(rel="stylesheet" type="text/css" href="/assets/vendors/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="/assets/vendors/components-font-awesome/css/font-awesome.min.css")
+
+    //- my style
+    link(rel="stylesheet"  type="text/css" href="css/style.min.css")
+  body
+    include components/navbar/navbar.jade
+    div(ng-view)
+      //-block Content
+
+  script(type="text/javascript" src="assets/vendors/angular/angular.js")
+  script(type="text/javascript" src="assets/vendors/angular-route/angular-route.js")
+  script(type="text/javascript" src="assets/vendors/angular-cookie/angular-cookie.js")
+  script(type="text/javascript" src="assets/vendors/restangular/dist/restangular.js")
+  script(type="text/javascript" src="assets/vendors/angular-bootstrap/ui-bootstrap-tpls.js")
+  script(type="text/javascript" src="assets/vendors/lodash/lodash.js")
+  script(type="text/javascript" src="angularApp/app.min.js")
+  script.
+    NProgress.done();

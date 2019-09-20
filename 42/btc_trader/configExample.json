@@ -1,0 +1,8 @@
+{
+    "user": "example",
+    "password": "example",
+    "host": "exmaple.com",
+    "port": "3306",
+    "db": "example",
+    "user_token": "XXXX"
+}

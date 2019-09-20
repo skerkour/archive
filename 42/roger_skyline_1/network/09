@@ -1,0 +1,5 @@
+la requete sur le serveur preconfigure nous renvoie 2 resultats suplementaires
+(10.52.1.11 * 2), et par exemple, grace a un traceroute, on se rend compte
+que se sont des adresses du reseau local.
+surement pour des raisons de performance,
+ou d'autres applciations internes

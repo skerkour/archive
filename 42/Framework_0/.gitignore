@@ -1,0 +1,6 @@
+framework-0.pdf
+node_modules/
+src/public/assets/vendors/
+target/
+config/email.js
+.nfs.*

@@ -1,0 +1,2 @@
+ps aux | grep sshd | grep -i sbin | cut -d ' ' -f7
+# pgrep sshd

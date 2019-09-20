@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var fs = require('fs');
+
+function createClassAndHeader(elem) {
+	var hpp = "#ifndef "+elem.toUpperCase()+"_HPP\n" +
+		"# define "+elem.toUpperCase()+"_HPP\n\n"+
+		"class " + elem+"\n" +
+		"{\npublic:\n\t"+elem+"();\n\t" +
+		elem+"(const "+elem+"& src);\n\t~"+elem+"();\n\n\t"+
+		elem+"& operator=(const "+elem+"& rhs);\n\n"+
+		"private:\n\n};\n\n#endif // "+elem.toUpperCase()+"_HPP\n";
+	fs.writeFile(elem+".hpp", hpp);
+	
+	var cpp = "\n#include \""+elem+".hpp\"\n\n"+
+		elem+"::"+elem+"()\n{\n}\n\n"+
+		elem+"::"+elem+"(const "+elem+"& src)\n{\n}\n\n"+
+		elem+"::~"+elem+"()\n{\n}\n\n"+
+		elem+"& "+elem+"::operator=(const "+elem+"& rhs)\n{\n}\n";
+	fs.writeFile(elem+".cpp", cpp);
+}
+/******************************************************************************/
+var av = process.argv.slice(2);
+
+av.forEach(createClassAndHeader);

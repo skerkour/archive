@@ -1,0 +1,7 @@
+cat /etc/resolv.conf
+en cherchant sur internet, j'ai vite trouve que ce fichier pouvait contenir des
+informations sympas.
+effectivement comme ecrit en commentaire, il contient les informations
+recherchees.
+
+(http://man7.org/linux/man-pages/man5/resolv.conf.5.html)

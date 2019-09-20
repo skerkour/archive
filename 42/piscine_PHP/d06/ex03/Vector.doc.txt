@@ -1,0 +1,23 @@
+
+<- Vector ----------------------------------------------------------------------
+
+Le constructeur de la classe attend un tableau. Les clefs attendues sont les
+suivantes :
+	’dest’ : vertex de destination du vecteur, obligatoire.
+	’orig’ : vertex d’origine du vecteur, optionnel, vaut une instance fraiche
+		du vertex x=0, y=0, z=0, w=1 par défaut.
+
+
+les méthodes suivantes sont implémentées :
+	magnitude() : retourne la longueur (ou "norme") du vecteur.
+	normalize() : retourne le vecteur normalisé. Si le vecteur est déja norma-
+		lisé, retourne une copie fraiche du vecteur.
+	add( Vector $rhs ) : retourne le vecteur somme des deux vecteurs.
+	sub( Vector $rhs ) : retourne le vecteur difference des deux vecteurs.
+	scalarProduct( $k ) : retourne le produit du vecteur avec un scalaire.
+	dotProduct( Vector $rhs ) : retourne le produit scalaire de deux vecteurs.
+	cos( Vector $rhs ) : retourne le cosinus de l’angle entre deux vecteurs.
+	crossProduct( Vector $rhs ) : retourne le produit en croix de deux vec-
+		teurs (repère main droite !)
+
+---------------------------------------------------------------------- Vector ->

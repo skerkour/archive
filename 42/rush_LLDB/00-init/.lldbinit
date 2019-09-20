@@ -1,0 +1,11 @@
+settings set target.x86-disassembly-flavor intel
+settings set prompt "(skerkour) "
+
+script print '\033[32m\033[1m  _____ _             _'
+script print ' / ____| |           | |'
+script print '| (___ | | _____ _ __| | _____  _   _ _ __'
+script print ' \___ \| |/ / _ \ \'__| |/ / _ \| | | | \'__|'
+script print '\033[31m ____) |   <  __/ |  |   < (_) | |_| | |'
+script print '|_____/|_|\_\___|_|  |_|\_\___/ \__,_|_|\033[0m'
+
+command script import ../02-script/reverse.py
