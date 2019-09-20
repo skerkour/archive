@@ -1,0 +1,7 @@
+description = "This is a configuration file for rocket: Deploy software as fast and easily as possible. See https://github.com/z0mbie42/rocket"
+
+[github_releases]
+assets = [
+  "dist/*.zip",
+  "dist/rocket_*_sha512sums.txt"
+]
