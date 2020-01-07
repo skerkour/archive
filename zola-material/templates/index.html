@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {% block js %}
+    {% if config.build_search_index %}
+      <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") | safe }}"></script>
+      <script type="text/javascript" src="{{ get_url(path="search_index.en.js") | safe }}"></script>
+    {% endif %}
+    <!-- Compiled and minified JavaScript -->
+    <script src="{{ get_url(path="jquery-3.4.0.min.js") | safe }}"></script>
+    <script src="{{ get_url(path="materialize/js/materialize.min.js") | safe }}"></script>
+    <script src="{{ get_url(path="material.js") | safe }}"></script>
+    {% endblock js %}
+
+
+    {% block css %}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{{ get_url(path="materialize/css/materialize.min.css") | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path="material.css") | safe }}">
+    {% endblock css %}
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+  </head>
+
+  <body>
+    <header>
+      <nav class="blue darken-3">
+        <a href="#" data-target="side-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+            <!-- <form class=" hide-on-med-and-down" id="form1" >
+              <div class="input-field" style="max-width: 400pt;">
+                <input id="search" type="search" required id="search">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+                <div id="searchResults" ></div>
+              </div>
+            </form> -->
+            </div>
+      </nav>
+      {% block before_menu %}
+      {% endblock before_menu %}
+      <ul id="side-nav" class="sidenav sidenav-fixed invesible-top" style="transform: translateX(0%);">
+        <!-- <li class="logo">
+          <a id="logo-container" href="/" class="brand-logo">
+            <img alt="logo" src="https://avatars0.githubusercontent.com/u/42414425?s=400&u=27c3762cbee3410a754da9a9bfccdce08e341130&v=4" />
+          </a>
+        </li> -->
+        <!-- <li class="search">
+          <div class="search-wrapper input-field">
+            <input id="search" placeholder="Search" class="autocomplete"><i class="material-icons">search</i>
+            <div class="search-results"></div>
+          </div>
+        </li> -->
+        {% block menu %}
+          {% set index = get_section(path="_index.md") %}
+          {% for s in index.subsections %}
+            {% set subsection = get_section(path=s) %}
+            {% if subsection.pages %}
+              <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                  {% set starts_with = subsection.path | split(pat="/") | first %}
+                  <li class='bold {% if current_path is starting_with(starts_with) %}active{% endif %}'>
+                    <a class="collapsible-header waves-effect waves-teal" tabindex="0">
+                      {{ subsection.title }} <i class="material-icons">expand_more</i>
+                    </a>
+                    <div class="collapsible-body">
+                      <ul>
+                        {% for page in subsection.pages %}
+                        <li {% if current_path == page.path %}class="active blue darken-3"{% endif %}>
+                          <a href="{{ page.permalink }}">
+                            {{ page.title }}
+                          </a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            {% else %}
+              <li class="bold {% if current_path == subsection.path %}active{% endif %}">
+                <a href="{{ subsection.permalink }}" class="waves-effect waves-light">{{ subsection.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endblock menu %}
+      </ul>
+      {% block after_menu %}
+      {% endblock after_menu %}
+    </header>
+
+    <main>
+      <!-- <nav>
+        <a href="#" data-target="side-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </nav> -->
+      <div class="container">
+
+        <div class="page">
+            <div class="page__header">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                {% if config.build_search_index %}
+                <!-- <span class="search-icon">🔎</span> -->
+                {% endif %}
+            </div>
+
+            <div class="page__content">
+                {% if config.build_search_index %}
+                <div class="search-container">
+                    <!-- <input id="search" type="search" placeholder="Search.."> -->
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="book-content">
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="page-footer grey lighten-5">
+      <div class="container">
+        <div class="prev-link">
+            {% block prev_link %}
+            {% endblock prev_link %}
+        </div>
+
+        <div class="next-link">
+            {% block next_link %}
+            {% endblock next_link %}
+        </div>
+      </div>
+    </footer>
+
+
+  {% block js_body %}
+  {% endblock js_body %}
+  </body>
+</html>

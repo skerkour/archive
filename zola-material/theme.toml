@@ -1,0 +1,12 @@
+name = "material"
+description = "A material theme for the zola static site generator"
+license = "Apache-2.0"
+homepage = "https://gitlab.com/bloom42/zola-material"
+min_version = "0.6.0"
+
+[extra]
+book_number_chapters = true
+
+[author]
+name = "Sylvain Kerkour"
+homepage = "https://kerkour.com"
