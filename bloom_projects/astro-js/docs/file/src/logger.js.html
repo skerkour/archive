@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/logger.js | @bloom42/astro</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Fast, elegant, structured and pluggable logging for Javascript "><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@bloom42/astro"><meta property="twitter:description" content="Fast, elegant, structured and pluggable logging for Javascript "></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/bloom42/astro-js"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/logger.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isBrowser">isBrowser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isNode">isNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isWebWorker">isWebWorker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Level">Level</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LoggerOptions">LoggerOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#writers">writers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/writers/console.js~ConsoleWriter.html">ConsoleWriter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/writers/stdout.js~StdoutWriter.html">StdoutWriter</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/logger.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const Level = require(&apos;./level&apos;);
+const clone = require(&apos;./clone&apos;);
+const { stdout, console } = require(&apos;./writers&apos;);
+const { isBrowser } = require(&apos;./exec_env&apos;);
+
+/**
+ * @typedef {Object} LoggerOptions
+ * @property {number} level - The minimum logging level
+ */
+
+
+/** Logger class */
+class Logger {
+  constructor(options) {
+    this._level = Level.DEBUG;
+    this._fields = {};
+    this._writer = isBrowser ? console : stdout;
+    this._insert_timestamp = true;
+    this._timestamp_field_name = &apos;timestamp&apos;;
+    this._message_field_name = &apos;message&apos;;
+    this._level_field_name = &apos;level&apos;;
+    this._hooks = [];
+
+    // config after initialisation
+    this.config(options);
+  }
+
+  _log(level, message) {
+    if (level &lt; this._level) {
+      return;
+    }
+
+    const event = clone(this._fields);
+
+    // handle message
+    if (message === undefined || message === null) {
+      // do nothing
+    } else if (typeof message === &apos;string&apos; &amp;&amp; message.length &gt; 0) {
+      event[this._message_field_name] = message;
+    } else if (message instanceof Error) {
+      event.error_name = message.name;
+      event[this._message_field_name] = message.message;
+    } else {
+      event[this._message_field_name] = JSON.stringify(message);
+    }
+
+    // handle timestamp
+    if (this._insert_timestamp === true) {
+      event[this._timestamp_field_name] = new Date().toISOString();
+    }
+
+    // default case: do not insert level field
+    switch (level) {
+      case Level.DEBUG:
+        event[this._level_field_name] = &apos;debug&apos;;
+        break;
+      case Level.INFO:
+        event[this._level_field_name] = &apos;info&apos;;
+        break;
+      case Level.WARN:
+        event[this._level_field_name] = &apos;warning&apos;;
+        break;
+      case Level.ERROR:
+        event[this._level_field_name] = &apos;error&apos;;
+        break;
+      case Level.FATAL:
+        event[this._level_field_name] = &apos;fatal&apos;;
+        break;
+      default:
+        break;
+    }
+
+    this._hooks.forEach(hook =&gt; hook(event));
+
+    this._writer.write(event);
+  }
+
+  /**
+   * configure the logger with the given options
+   * @param {LoggerOptions} options - the options to configure the logger
+   */
+  config(options) {
+    if (!options) {
+      return;
+    }
+    if (options.level !== undefined) {
+      this._level = options.level;
+    }
+    if (options.fields !== undefined) {
+      this._fields = options.fields;
+    }
+    if (options.writer !== undefined) {
+      this._writer = options.writer;
+    }
+    if (options.insert_timestamp !== undefined) {
+      this._insert_timestamp = options.insert_timestamp;
+    }
+    if (options.timestamp_field_name !== undefined) {
+      this._timestamp_field_name = options.timestamp_field_name;
+    }
+    if (options.message_field_name !== undefined) {
+      this._message_field_name = options.message_field_name;
+    }
+    if (options.level_field_name !== undefined) {
+      this._level_field_name = options.level_field_name;
+    }
+    if (options.hooks !== undefined) {
+      this._hooks = options.hooks;
+    }
+  }
+
+
+  /**
+   * create a copy of the logger, add the given fields to it and return it
+   * @param {Object} fields - fields to add to the logger instance
+   * @return {Logger} a new Logger which embed the given fields
+   */
+  with(fields) {
+    const newFields = fields || {};
+    // clone the logger instance
+    const newLogger = Object.assign(
+      Object.create(Object.getPrototypeOf(this)),
+      this,
+    );
+    newLogger._fields = { ...this._fields, ...newFields };
+    return newLogger;
+  }
+
+  /**
+   * log an event with the DEBUG level
+   * @param {string} message - the message to log
+   */
+  debug(message) {
+    this._log(Level.DEBUG, message);
+  }
+
+  /**
+   * log an event with the INFO level
+   * @param {string} message - the message to log
+   */
+  info(message) {
+    this._log(Level.INFO, message);
+  }
+
+  /**
+   * log an event with the WARN level
+   * @param {string} message - the message to log
+   */
+  warn(message) {
+    this._log(Level.WARN, message);
+  }
+
+  /**
+   * log an event with the ERROR level
+   * @param {string} message - the message to log
+   */
+  error(message) {
+    this._log(Level.ERROR, message);
+  }
+
+  /**
+   * log an event with the FATAL level then exit(1)
+   * @param {string} message - the message to log
+   */
+  fatal(message) {
+    this._log(Level.FATAL, message);
+    process.exit(1);
+  }
+
+  /**
+   * log an event without level nor message
+   * @param {Object} [fields] - additional fields to add to the event (optional)
+   */
+  track(fields) {
+    const newLogger = this.with(fields);
+    newLogger._log(Level.NONE);
+  }
+}
+
+
+module.exports = Logger;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

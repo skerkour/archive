@@ -1,0 +1,41 @@
+services:
+  - docker:dind
+
+stages:
+  - test
+  - build
+
+
+include:
+  - template: Dependency-Scanning.gitlab-ci.yml
+  - template: SAST.gitlab-ci.yml
+  - template: Container-Scanning.gitlab-ci.yml
+
+variables:
+  # Go
+  GO_IMAGE: golang:latest
+
+
+####################################################################################################
+## Test
+####################################################################################################
+
+test:
+  stage: test
+  image: $GO_IMAGE
+  tags:
+    - docker
+  script:
+    - make test
+
+####################################################################################################
+## Build
+####################################################################################################
+
+build:
+  stage: build
+  image: $GO_IMAGE
+  tags:
+    - docker
+  script:
+    - make build

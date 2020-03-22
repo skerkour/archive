@@ -1,0 +1,22 @@
+language: python # Set the build language to Python
+
+python: 3.6 # Set the version of Python to use
+
+branches: master # Set the branch to build from
+
+install:
+  - pip install mkdocs # Install the required dependencies
+
+script:
+  - make
+
+
+deploy:
+  provider: firebase
+  skip_cleanup: true # Important, otherwise the build output would be purged.
+  token:
+    secure: $FIREBASE_TOKEN
+
+notifications:
+  email:
+    on_success: never

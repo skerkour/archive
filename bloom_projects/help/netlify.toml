@@ -1,0 +1,47 @@
+[Settings]
+
+
+[build]
+  command = "make"
+  publish = "public/"
+
+
+# # rewrite to for vuejs
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+
+[[redirects]]
+  from = "https://festive-noether-5961c9.netlify.com/*"
+  to = "https://bloom.sh/help"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://help.bloom.sh/*"
+  to = "https://bloom.sh/help"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.help.bloom.sh/*"
+  to = "https://bloom.sh/help"
+  status = 301
+  force = true
+
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+    "X-XSS-Protection" = "1; mode=block"
+    "X-Content-Type-Options" = "nosniff"
+    "X-Download-Options" = "noopen"
+    "X-Frame-Options" = "DENY"
+    "Referrer-Policy" = "same-origin"
+    "Expect-CT" = "max-age=86400; enforce"
+    "Strict-Transport-Security" = "max-age=63072000; includeSubDomains; preload"
+    "Content-Security-Policy" = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.crisp.chat; style-src 'self' 'unsafe-inline' https://*.crisp.chat https://fonts.googleapis.com; img-src 'self' data: https://bloom.sh https://*.crisp.chat https://gitlab.com https://docs.rs; font-src 'self' https://*.crisp.chat https://fonts.googleapis.com  https://fonts.gstatic.com; connect-src https://*.bloom.sh https://bloom.sh wss://*.crisp.chat https://client.crisp.chat https://sentry.io/1469833 https://sentry.io/api/1469833; report-uri https://sentry.io/api/1469833/security/?sentry_key=4237d004bf794909ad8a8532e9132032"
