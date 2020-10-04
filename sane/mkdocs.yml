@@ -1,0 +1,30 @@
+docs_dir: pages
+
+theme:
+  name: null
+  custom_dir: '../themes/mkdocs-material/material'
+  language: en
+  feature:
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: /favicon.ico
+  logo:
+    icon: "\uE80C"
+  base_url: '/sane/'
+
+site_name: SANE
+site_url: https://gitlab.com/bloom42/sane
+repo_url: https://gitlab.com/bloom42/sane
+edit_uri: https://gitlab.com/bloom42/sane/edit/master/pages/
+site_dir: ../../dist/sane
+
+nav:
+  - index.md
+  - implementations.md
+  - sane-vs.md
+  - Versions:
+    - versions/v1.0.0.md
