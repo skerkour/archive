@@ -1,0 +1,63 @@
+# image: alpine:latest
+# stages:
+#   - build
+#   - deploy
+
+# before_script:
+#   - apk add --update make
+
+
+# build:
+#   stage: build
+#   tags:
+#     - docker
+#     - bloom42cicd
+#   script:
+#     - apk add python3
+#     - pip3 install mkdocs
+#     - make
+#   artifacts:
+#     paths:
+#       - dist/
+
+# deploy:
+#   stage: deploy
+#   image: node:10-alpine
+#   tags:
+#     - docker
+#     - bloom42cicd
+#   script:
+#     - npm config set unsafe-perm true
+#     - npm install -g firebase-tools
+#     - firebase deploy --token $FIREBASE_TOKEN
+
+
+stages:
+  - build
+  - pages
+
+build:
+  stage: build
+  image: python:alpine
+  only:
+    - master
+  script:
+    - pip install mkdocs && apk add make
+    - rm -rf public
+    - make
+  artifacts:
+    paths:
+      - public
+
+
+pages:
+  stage: pages
+  image: node:lts
+  only:
+    - master
+  script:
+    - npm i -g netlify-cli
+    - netlify deploy --site $NETLIFY_APP_ID --auth $NETLIFY_AUTH_TOKEN --prod
+  artifacts:
+    paths:
+    - public
