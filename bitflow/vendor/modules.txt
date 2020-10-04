@@ -1,0 +1,160 @@
+# github.com/RoaringBitmap/roaring v0.4.21
+github.com/RoaringBitmap/roaring
+# github.com/anacrolix/dht/v2 v2.3.1
+github.com/anacrolix/dht/v2
+github.com/anacrolix/dht/v2/krpc
+# github.com/anacrolix/go-libutp v1.0.2
+github.com/anacrolix/go-libutp
+# github.com/anacrolix/log v0.4.0
+github.com/anacrolix/log
+# github.com/anacrolix/missinggo v1.2.1
+github.com/anacrolix/missinggo
+github.com/anacrolix/missinggo/bitmap
+github.com/anacrolix/missinggo/expect
+github.com/anacrolix/missinggo/httptoo
+github.com/anacrolix/missinggo/inproc
+github.com/anacrolix/missinggo/iter
+github.com/anacrolix/missinggo/mime
+github.com/anacrolix/missinggo/orderedmap
+github.com/anacrolix/missinggo/pproffd
+github.com/anacrolix/missinggo/prioritybitmap
+github.com/anacrolix/missinggo/pubsub
+github.com/anacrolix/missinggo/resource
+github.com/anacrolix/missinggo/slices
+github.com/anacrolix/missinggo/x
+# github.com/anacrolix/missinggo/perf v1.0.0
+github.com/anacrolix/missinggo/perf
+# github.com/anacrolix/missinggo/v2 v2.3.1
+github.com/anacrolix/missinggo/v2
+github.com/anacrolix/missinggo/v2/conntrack
+github.com/anacrolix/missinggo/v2/iter
+# github.com/anacrolix/mmsg v1.0.0
+github.com/anacrolix/mmsg
+github.com/anacrolix/mmsg/socket
+# github.com/anacrolix/stm v0.2.0
+github.com/anacrolix/stm
+github.com/anacrolix/stm/rate
+github.com/anacrolix/stm/stmutil
+# github.com/anacrolix/sync v0.2.0
+github.com/anacrolix/sync
+# github.com/anacrolix/torrent v1.10.0
+github.com/anacrolix/torrent
+github.com/anacrolix/torrent/bencode
+github.com/anacrolix/torrent/iplist
+github.com/anacrolix/torrent/logonce
+github.com/anacrolix/torrent/metainfo
+github.com/anacrolix/torrent/mmap_span
+github.com/anacrolix/torrent/mse
+github.com/anacrolix/torrent/peer_protocol
+github.com/anacrolix/torrent/storage
+github.com/anacrolix/torrent/tracker
+# github.com/anacrolix/upnp v0.1.1
+github.com/anacrolix/upnp
+# github.com/anacrolix/utp v0.0.0-20180219060659-9e0e1d1d0572
+github.com/anacrolix/utp
+# github.com/aws/aws-sdk-go v1.26.8
+github.com/aws/aws-sdk-go/aws
+github.com/aws/aws-sdk-go/aws/arn
+github.com/aws/aws-sdk-go/aws/awserr
+github.com/aws/aws-sdk-go/aws/awsutil
+github.com/aws/aws-sdk-go/aws/client
+github.com/aws/aws-sdk-go/aws/client/metadata
+github.com/aws/aws-sdk-go/aws/corehandlers
+github.com/aws/aws-sdk-go/aws/credentials
+github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds
+github.com/aws/aws-sdk-go/aws/credentials/endpointcreds
+github.com/aws/aws-sdk-go/aws/credentials/processcreds
+github.com/aws/aws-sdk-go/aws/credentials/stscreds
+github.com/aws/aws-sdk-go/aws/csm
+github.com/aws/aws-sdk-go/aws/defaults
+github.com/aws/aws-sdk-go/aws/ec2metadata
+github.com/aws/aws-sdk-go/aws/endpoints
+github.com/aws/aws-sdk-go/aws/request
+github.com/aws/aws-sdk-go/aws/session
+github.com/aws/aws-sdk-go/aws/signer/v4
+github.com/aws/aws-sdk-go/internal/ini
+github.com/aws/aws-sdk-go/internal/s3err
+github.com/aws/aws-sdk-go/internal/sdkio
+github.com/aws/aws-sdk-go/internal/sdkmath
+github.com/aws/aws-sdk-go/internal/sdkrand
+github.com/aws/aws-sdk-go/internal/sdkuri
+github.com/aws/aws-sdk-go/internal/shareddefaults
+github.com/aws/aws-sdk-go/private/protocol
+github.com/aws/aws-sdk-go/private/protocol/eventstream
+github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamapi
+github.com/aws/aws-sdk-go/private/protocol/json/jsonutil
+github.com/aws/aws-sdk-go/private/protocol/query
+github.com/aws/aws-sdk-go/private/protocol/query/queryutil
+github.com/aws/aws-sdk-go/private/protocol/rest
+github.com/aws/aws-sdk-go/private/protocol/restxml
+github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil
+github.com/aws/aws-sdk-go/service/s3
+github.com/aws/aws-sdk-go/service/s3/internal/arn
+github.com/aws/aws-sdk-go/service/sqs
+github.com/aws/aws-sdk-go/service/sts
+github.com/aws/aws-sdk-go/service/sts/stsiface
+# github.com/benbjohnson/immutable v0.2.0
+github.com/benbjohnson/immutable
+# github.com/bradfitz/iter v0.0.0-20191230175014-e8f45d346db8
+github.com/bradfitz/iter
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/dustin/go-humanize v1.0.0
+github.com/dustin/go-humanize
+# github.com/edsrzf/mmap-go v1.0.0
+github.com/edsrzf/mmap-go
+# github.com/etcd-io/bbolt v1.3.3
+github.com/etcd-io/bbolt
+# github.com/getsentry/sentry-go v0.4.0
+github.com/getsentry/sentry-go
+# github.com/glycerine/go-unsnap-stream v0.0.0-20190901134440-81cf024a9e0a
+github.com/glycerine/go-unsnap-stream
+# github.com/golang/snappy v0.0.1
+github.com/golang/snappy
+# github.com/google/btree v1.0.0
+github.com/google/btree
+# github.com/huandu/xstrings v1.2.1
+github.com/huandu/xstrings
+# github.com/inconshreveable/mousetrap v1.0.0
+github.com/inconshreveable/mousetrap
+# github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
+github.com/jmespath/go-jmespath
+# github.com/mattn/go-sqlite3 v2.0.2+incompatible
+github.com/mattn/go-sqlite3
+# github.com/mschoch/smat v0.0.0-20160514031455-90eadee771ae
+github.com/mschoch/smat
+# github.com/philhofer/fwd v1.0.0
+github.com/philhofer/fwd
+# github.com/pkg/errors v0.8.1
+github.com/pkg/errors
+# github.com/ryszard/goskiplist v0.0.0-20150312221310-2dfbae5fcf46
+github.com/ryszard/goskiplist/skiplist
+# github.com/satori/go.uuid v1.2.0
+github.com/satori/go.uuid
+# github.com/spaolacci/murmur3 v1.1.0
+github.com/spaolacci/murmur3
+# github.com/spf13/cobra v0.0.5
+github.com/spf13/cobra
+# github.com/spf13/pflag v1.0.5
+github.com/spf13/pflag
+# github.com/tinylib/msgp v1.1.1
+github.com/tinylib/msgp/msgp
+# github.com/willf/bitset v1.1.10
+github.com/willf/bitset
+# github.com/willf/bloom v2.0.3+incompatible
+github.com/willf/bloom
+# gitlab.com/bloom42/libs/rz-go v1.3.0
+gitlab.com/bloom42/libs/rz-go
+gitlab.com/bloom42/libs/rz-go/internal/json
+gitlab.com/bloom42/libs/rz-go/log
+# golang.org/x/net v0.0.0-20191209160850-c0dbc17a3553
+golang.org/x/net/internal/socks
+golang.org/x/net/proxy
+# golang.org/x/sys v0.0.0-20191228213918-04cbcbbfeed8
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+golang.org/x/time/rate
+# golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
+golang.org/x/xerrors
+golang.org/x/xerrors/internal
