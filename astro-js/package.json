@@ -1,0 +1,37 @@
+{
+  "name": "@bloom42/astro",
+  "version": "0.8.2",
+  "description": "Fast, elegant, structured and pluggable logging for Javascript ",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloom42/astro-js.git"
+  },
+  "keywords": [
+    "logs",
+    "logging",
+    "astro",
+    "bloom"
+  ],
+  "author": "z0mbie42",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bloom42/astro-js/issues"
+  },
+  "homepage": "https://github.com/bloom42/astro-js",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-node": "^1.0.3",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}

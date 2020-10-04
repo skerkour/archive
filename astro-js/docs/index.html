@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | @bloom42/astro</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Fast, elegant, structured and pluggable logging for Javascript "><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@bloom42/astro"><meta property="twitter:description" content="Fast, elegant, structured and pluggable logging for Javascript "></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/bloom42/astro-js"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/logger.js~Logger.html">Logger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isBrowser">isBrowser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isNode">isNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-isWebWorker">isWebWorker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Level">Level</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-LoggerOptions">LoggerOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#writers">writers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/writers/console.js~ConsoleWriter.html">ConsoleWriter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/writers/stdout.js~StdoutWriter.html">StdoutWriter</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h2 id="astro-js">Astro-JS</h2><p><a href="https://kerkour.com/post/logging/">Make logging great again</a></p>
+<p><a href="https://www.npmjs.com/package/@bloom42/astro"><img src="https://img.shields.io/badge/npm-@bloom42/astro-blue.svg" alt="NPM Package"></a>
+<a href="https://www.npmjs.com/package/@bloom42/astro"><img src="https://img.shields.io/npm/v/@bloom42/astro.svg?colorB=blue" alt="NPM Release"></a></p>
+<p><a href="https://www.npmjs.com/package/@bloom42/astro"><img src="https://nodei.co/npm/@bloom42/astro.png?stars=true" alt="NPM"></a></p>
+<ol>
+<li><a href="#quickstart">Quickstart</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#log-usage">Log usage</a></li>
+<li><a href="#examples">Examples</a></li>
+</ol>
+<hr>
+<h2 id="quickstart">Quickstart</h2><pre><code class="lang-bash"><code class="source-code prettyprint">$ npm i @bloom42/astro</code>
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const { log } = require(&apos;@bloom42/astro&apos;);
+
+const log2 = log.with({ num: 2 });
+
+log.info(&apos;hello world&apos;);
+log2.info(&apos;hello world&apos;);
+log.with({ lol: 42 }).error(&apos;fatal knock out&apos;);
+log2.with({ num: 3, pi: 3.14 }).info(&apos;hello world&apos;);
+log2.info(&apos;hello world&apos;);
+log2.track({ description: &apos;event without message nor level&apos; });</code>
+</code></pre>
+<h2 id="configuration">Configuration</h2><pre><code class="lang-javascript"><code class="source-code prettyprint">// default configuration
+const options = {
+  level: Level.DEBUG,
+  fields: {},
+  writer: isBrowser ? console : stdout,
+  insert_timestamp: true,
+  timestamp_field_name: &apos;timestamp&apos;,
+  message_field_name: &apos;message&apos;,
+  level_field_name: &apos;level&apos;,
+  hooks: [],
+};
+
+log.config(options);</code>
+</code></pre>
+<h2 id="log-usage">Log usage</h2><pre><code class="lang-typescript"><code class="source-code prettyprint">log.config(options: any)
+log.with(fields: any): Logger
+log.debug(message: string)
+log.info(message: string)
+log.warn(message: string)
+log.error(message: string)
+log.fatal(message: string) // log with the &quot;fatal&quot; level then exit(1)
+log.track(fields: any) // log an event without level nor message</code>
+</code></pre>
+<h2 id="examples">Examples</h2><p><a href="https://github.com/bloom42/astro-js/tree/master/examples">See the examples folder</a></p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,1294 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/clone.js",
+    "content": "/* eslint-disable */\n/*function clone(o) {\n  // null, undefined values check\n  if (!o) {\n    return o;\n  }\n  const output = Array.isArray(o) ? [] : {};\n\n  Object.keys(o).forEach((key) => {\n    const v = o[key];\n    output[key] = (typeof v === 'object') ? clone(v) : v;\n  });\n  return output;\n}\n*/\n/**\n * @ignore\n */\nfunction clone(item) {\n  if (!item) { return item; } // null, undefined values check\n\n  var types = [ Number, String, Boolean ], \n    result;\n\n  // normalizing primitives if someone did new String('aaa'), or new Number('444');\n  types.forEach(function(type) {\n    if (item instanceof type) {\n      result = type( item );\n    }\n  });\n\n  if (typeof result == \"undefined\") {\n    if (Object.prototype.toString.call( item ) === \"[object Array]\") {\n      result = [];\n      item.forEach(function(child, index, array) { \n        result[index] = clone( child );\n      });\n    } else if (typeof item == \"object\") {\n      // testing that this is DOM\n      if (item.nodeType && typeof item.cloneNode == \"function\") {\n        result = item.cloneNode( true );    \n      } else if (!item.prototype) { // check that this is a literal\n        if (item instanceof Date) {\n          result = new Date(item);\n        } else {\n          // it is an object literal\n          result = {};\n          for (var i in item) {\n            result[i] = clone( item[i] );\n          }\n        }\n      } else {\n        // depending what you would like here,\n        // just keep the reference, or create new object\n        if (false && item.constructor) {\n          // would not advice to do that, reason? Read below\n          result = new item.constructor();\n        } else {\n          result = item;\n        }\n      }\n    } else {\n      result = item;\n    }\n  }\n\n  return result;\n}\nmodule.exports = clone;\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/clone.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "clone",
+    "memberof": "src/clone.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/clone.js~clone",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/clone.js",
+    "importStyle": "clone",
+    "description": "",
+    "lineNumber": 19,
+    "ignore": true,
+    "params": [
+      {
+        "name": "item",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/exec_env.js",
+    "content": "const isBrowser = typeof window !== 'undefined';\nconst isNode = typeof window === 'undefined' && typeof process !== 'undefined';\nconst isWebWorker = typeof self !== 'undefined' && typeof postMessage === 'function'; // eslint-disable-line no-restricted-globals\n\nmodule.exports = {\n  isBrowser,\n  isNode,\n  isWebWorker,\n};\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/exec_env.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "isBrowser",
+    "memberof": "src/exec_env.js",
+    "static": true,
+    "longname": "src/exec_env.js~isBrowser",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/exec_env.js",
+    "importStyle": "{isBrowser}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "variable",
+    "name": "isNode",
+    "memberof": "src/exec_env.js",
+    "static": true,
+    "longname": "src/exec_env.js~isNode",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/exec_env.js",
+    "importStyle": "{isNode}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "name": "isWebWorker",
+    "memberof": "src/exec_env.js",
+    "static": true,
+    "longname": "src/exec_env.js~isWebWorker",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/exec_env.js",
+    "importStyle": "{isWebWorker}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/level.js",
+    "content": "/**\n * Enum for level values.\n * @readonly\n * @enum {number}\n */\nconst Level = {\n  DEBUG: 0,\n  INFO: 1,\n  WARN: 2,\n  ERROR: 3,\n  FATAL: 4,\n  NONE: 5,\n  NOOP: 6,\n};\n\nmodule.exports = Level;\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/level.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "Level",
+    "memberof": "src/level.js",
+    "static": true,
+    "longname": "src/level.js~Level",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/level.js",
+    "importStyle": "Level",
+    "description": "Enum for level values.",
+    "lineNumber": 6,
+    "unknown": [
+      {
+        "tagName": "@readonly",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@enum",
+        "tagValue": "{number}"
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"DEBUG\": *, \"INFO\": number, \"WARN\": number, \"ERROR\": number, \"FATAL\": number, \"NONE\": number, \"NOOP\": number}"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "src/log.js",
+    "content": "const Logger = require('./logger');\n\nmodule.exports = new Logger();\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/log.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/logger.js",
+    "content": "const Level = require('./level');\nconst clone = require('./clone');\nconst { stdout, console } = require('./writers');\nconst { isBrowser } = require('./exec_env');\n\n/**\n * @typedef {Object} LoggerOptions\n * @property {number} level - The minimum logging level\n */\n\n\n/** Logger class */\nclass Logger {\n  constructor(options) {\n    this._level = Level.DEBUG;\n    this._fields = {};\n    this._writer = isBrowser ? console : stdout;\n    this._insert_timestamp = true;\n    this._timestamp_field_name = 'timestamp';\n    this._message_field_name = 'message';\n    this._level_field_name = 'level';\n    this._hooks = [];\n\n    // config after initialisation\n    this.config(options);\n  }\n\n  _log(level, message) {\n    if (level < this._level) {\n      return;\n    }\n\n    const event = clone(this._fields);\n\n    // handle message\n    if (message === undefined || message === null) {\n      // do nothing\n    } else if (typeof message === 'string' && message.length > 0) {\n      event[this._message_field_name] = message;\n    } else if (message instanceof Error) {\n      event.error_name = message.name;\n      event[this._message_field_name] = message.message;\n    } else {\n      event[this._message_field_name] = JSON.stringify(message);\n    }\n\n    // handle timestamp\n    if (this._insert_timestamp === true) {\n      event[this._timestamp_field_name] = new Date().toISOString();\n    }\n\n    // default case: do not insert level field\n    switch (level) {\n      case Level.DEBUG:\n        event[this._level_field_name] = 'debug';\n        break;\n      case Level.INFO:\n        event[this._level_field_name] = 'info';\n        break;\n      case Level.WARN:\n        event[this._level_field_name] = 'warning';\n        break;\n      case Level.ERROR:\n        event[this._level_field_name] = 'error';\n        break;\n      case Level.FATAL:\n        event[this._level_field_name] = 'fatal';\n        break;\n      default:\n        break;\n    }\n\n    this._hooks.forEach(hook => hook(event));\n\n    this._writer.write(event);\n  }\n\n  /**\n   * configure the logger with the given options\n   * @param {LoggerOptions} options - the options to configure the logger\n   */\n  config(options) {\n    if (!options) {\n      return;\n    }\n    if (options.level !== undefined) {\n      this._level = options.level;\n    }\n    if (options.fields !== undefined) {\n      this._fields = options.fields;\n    }\n    if (options.writer !== undefined) {\n      this._writer = options.writer;\n    }\n    if (options.insert_timestamp !== undefined) {\n      this._insert_timestamp = options.insert_timestamp;\n    }\n    if (options.timestamp_field_name !== undefined) {\n      this._timestamp_field_name = options.timestamp_field_name;\n    }\n    if (options.message_field_name !== undefined) {\n      this._message_field_name = options.message_field_name;\n    }\n    if (options.level_field_name !== undefined) {\n      this._level_field_name = options.level_field_name;\n    }\n    if (options.hooks !== undefined) {\n      this._hooks = options.hooks;\n    }\n  }\n\n\n  /**\n   * create a copy of the logger, add the given fields to it and return it\n   * @param {Object} fields - fields to add to the logger instance\n   * @return {Logger} a new Logger which embed the given fields\n   */\n  with(fields) {\n    const newFields = fields || {};\n    // clone the logger instance\n    const newLogger = Object.assign(\n      Object.create(Object.getPrototypeOf(this)),\n      this,\n    );\n    newLogger._fields = { ...this._fields, ...newFields };\n    return newLogger;\n  }\n\n  /**\n   * log an event with the DEBUG level\n   * @param {string} message - the message to log\n   */\n  debug(message) {\n    this._log(Level.DEBUG, message);\n  }\n\n  /**\n   * log an event with the INFO level\n   * @param {string} message - the message to log\n   */\n  info(message) {\n    this._log(Level.INFO, message);\n  }\n\n  /**\n   * log an event with the WARN level\n   * @param {string} message - the message to log\n   */\n  warn(message) {\n    this._log(Level.WARN, message);\n  }\n\n  /**\n   * log an event with the ERROR level\n   * @param {string} message - the message to log\n   */\n  error(message) {\n    this._log(Level.ERROR, message);\n  }\n\n  /**\n   * log an event with the FATAL level then exit(1)\n   * @param {string} message - the message to log\n   */\n  fatal(message) {\n    this._log(Level.FATAL, message);\n    process.exit(1);\n  }\n\n  /**\n   * log an event without level nor message\n   * @param {Object} [fields] - additional fields to add to the event (optional)\n   */\n  track(fields) {\n    const newLogger = this.with(fields);\n    newLogger._log(Level.NONE);\n  }\n}\n\n\nmodule.exports = Logger;\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/logger.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "typedef",
+    "name": "LoggerOptions",
+    "memberof": "src/logger.js",
+    "static": true,
+    "longname": "src/logger.js~LoggerOptions",
+    "access": "public",
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "level",
+        "description": "The minimum logging level"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "LoggerOptions"
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "class",
+    "name": "Logger",
+    "memberof": "src/logger.js",
+    "static": true,
+    "longname": "src/logger.js~Logger",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/logger.js",
+    "importStyle": "Logger",
+    "description": "Logger class",
+    "lineNumber": 13,
+    "interface": false
+  },
+  {
+    "__docId__": 60,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "_level",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_level",
+    "access": "private",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "_fields",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_fields",
+    "access": "private",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{}"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "_writer",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_writer",
+    "access": "private",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "_insert_timestamp",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_insert_timestamp",
+    "access": "private",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "_timestamp_field_name",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_timestamp_field_name",
+    "access": "private",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "_message_field_name",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_message_field_name",
+    "access": "private",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "member",
+    "name": "_level_field_name",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_level_field_name",
+    "access": "private",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "member",
+    "name": "_hooks",
+    "memberof": "src/logger.js~Logger",
+    "static": false,
+    "longname": "src/logger.js~Logger#_hooks",
+    "access": "private",
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "_log",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#_log",
+    "access": "private",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "params": [
+      {
+        "name": "level",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "message",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "config",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#config",
+    "access": "public",
+    "description": "configure the logger with the given options",
+    "lineNumber": 82,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "LoggerOptions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": "the options to configure the logger"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "with",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#with",
+    "access": "public",
+    "description": "create a copy of the logger, add the given fields to it and return it",
+    "lineNumber": 118,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fields",
+        "description": "fields to add to the logger instance"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Logger"
+      ],
+      "spread": false,
+      "description": "a new Logger which embed the given fields"
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "method",
+    "name": "debug",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#debug",
+    "access": "public",
+    "description": "log an event with the DEBUG level",
+    "lineNumber": 133,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "the message to log"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "info",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#info",
+    "access": "public",
+    "description": "log an event with the INFO level",
+    "lineNumber": 141,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "the message to log"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "warn",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#warn",
+    "access": "public",
+    "description": "log an event with the WARN level",
+    "lineNumber": 149,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "the message to log"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "error",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#error",
+    "access": "public",
+    "description": "log an event with the ERROR level",
+    "lineNumber": 157,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "the message to log"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 84,
+    "kind": "method",
+    "name": "fatal",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#fatal",
+    "access": "public",
+    "description": "log an event with the FATAL level then exit(1)",
+    "lineNumber": 165,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "the message to log"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 85,
+    "kind": "method",
+    "name": "track",
+    "memberof": "src/logger.js~Logger",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/logger.js~Logger#track",
+    "access": "public",
+    "description": "log an event without level nor message",
+    "lineNumber": 174,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "fields",
+        "description": "additional fields to add to the event (optional)"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "name": "src/writers/console.js",
+    "content": "class ConsoleWriter {\n  write(event) { // eslint-disable-line class-methods-use-this\n    console.log(JSON.stringify(event));\n  }\n}\n\nmodule.exports = ConsoleWriter;\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/writers/console.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 87,
+    "kind": "class",
+    "name": "ConsoleWriter",
+    "memberof": "src/writers/console.js",
+    "static": true,
+    "longname": "src/writers/console.js~ConsoleWriter",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/writers/console.js",
+    "importStyle": "ConsoleWriter",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "write",
+    "memberof": "src/writers/console.js~ConsoleWriter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/writers/console.js~ConsoleWriter#write",
+    "access": "public",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "src/writers/stdout.js",
+    "content": "class StdoutWriter {\n  write(event) { // eslint-disable-line class-methods-use-this\n    process.stdout.write(JSON.stringify(event) + '\\n');\n  }\n}\n\nmodule.exports = StdoutWriter;\n",
+    "static": true,
+    "longname": "/Users/user/Desktop/bloom/astro-js/src/writers/stdout.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "class",
+    "name": "StdoutWriter",
+    "memberof": "src/writers/stdout.js",
+    "static": true,
+    "longname": "src/writers/stdout.js~StdoutWriter",
+    "access": "public",
+    "export": true,
+    "importPath": "@bloom42/astro/src/writers/stdout.js",
+    "importStyle": "StdoutWriter",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "write",
+    "memberof": "src/writers/stdout.js~StdoutWriter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/writers/stdout.js~StdoutWriter#write",
+    "access": "public",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "kind": "index",
+    "content": "## Astro-JS\n\n[Make logging great again](https://kerkour.com/post/logging/)\n\n[![NPM Package](https://img.shields.io/badge/npm-@bloom42/astro-blue.svg)](https://www.npmjs.com/package/@bloom42/astro)\n[![NPM Release](https://img.shields.io/npm/v/@bloom42/astro.svg?colorB=blue)](https://www.npmjs.com/package/@bloom42/astro)\n\n[![NPM](https://nodei.co/npm/@bloom42/astro.png?stars=true)](https://www.npmjs.com/package/@bloom42/astro)\n\n\n1. [Quickstart](#quickstart)\n2. [Configuration](#configuration)\n3. [Log usage](#log-usage)\n4. [Examples](#examples)\n------------------------------\n\n\n## Quickstart\n\n```bash\n$ npm i @bloom42/astro\n```\n\n```javascript\nconst { log } = require('@bloom42/astro');\n\nconst log2 = log.with({ num: 2 });\n\nlog.info('hello world');\nlog2.info('hello world');\nlog.with({ lol: 42 }).error('fatal knock out');\nlog2.with({ num: 3, pi: 3.14 }).info('hello world');\nlog2.info('hello world');\nlog2.track({ description: 'event without message nor level' });\n```\n\n\n## Configuration\n```javascript\n// default configuration\nconst options = {\n  level: Level.DEBUG,\n  fields: {},\n  writer: isBrowser ? console : stdout,\n  insert_timestamp: true,\n  timestamp_field_name: 'timestamp',\n  message_field_name: 'message',\n  level_field_name: 'level',\n  hooks: [],\n};\n\nlog.config(options);\n```\n\n\n## Log usage\n```typescript\nlog.config(options: any)\nlog.with(fields: any): Logger\nlog.debug(message: string)\nlog.info(message: string)\nlog.warn(message: string)\nlog.error(message: string)\nlog.fatal(message: string) // log with the \"fatal\" level then exit(1)\nlog.track(fields: any) // log an event without level nor message\n```\n\n\n## Examples\n\n[See the examples folder](https://github.com/bloom42/astro-js/tree/master/examples)\n",
+    "longname": "/Users/user/Desktop/bloom/astro-js/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@bloom42/astro\",\n  \"version\": \"0.8.1\",\n  \"description\": \"Fast, elegant, structured and pluggable logging for Javascript \",\n  \"main\": \"lib/index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bloom42/astro-js.git\"\n  },\n  \"keywords\": [\n    \"logs\",\n    \"logging\",\n    \"astro\",\n    \"bloom\"\n  ],\n  \"author\": \"z0mbie42\",\n  \"license\": \"Apache-2.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/bloom42/astro-js/issues\"\n  },\n  \"homepage\": \"https://github.com/bloom42/astro-js\",\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-plugin-transform-object-rest-spread\": \"^6.26.0\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-node\": \"^1.0.3\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-airbnb-base\": \"^13.0.0\",\n    \"eslint-plugin-import\": \"^2.13.0\"\n  }\n}\n",
+    "longname": "/Users/user/Desktop/bloom/astro-js/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
