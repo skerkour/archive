@@ -1,0 +1,72 @@
+services:
+  - docker:dind
+
+stages:
+  - test
+  - build
+  - release
+
+
+include:
+  - template: Dependency-Scanning.gitlab-ci.yml
+  - template: SAST.gitlab-ci.yml
+  - template: Container-Scanning.gitlab-ci.yml
+  - template: Code-Quality.gitlab-ci.yml # https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html
+  - template: License-Scanning.gitlab-ci.yml # https://docs.gitlab.com/ee/user/compliance/license_compliance/#migration-from-license_management-to-license_scanning
+
+variables:
+  # Go
+  GO_IMAGE: golang:alpine
+
+####################################################################################################
+## Test
+####################################################################################################
+
+test:
+  stage: test
+  image: $GO_IMAGE
+  tags:
+    - docker
+  script:
+    - apk add --no-cache alsa-lib-dev make gcc libc-dev
+    - make test
+
+
+####################################################################################################
+## Build
+####################################################################################################
+
+build:
+  stage: build
+  image: $GO_IMAGE
+  tags:
+    - docker
+  script:
+    - apk add --no-cache alsa-lib-dev make gcc libc-dev
+    - make build
+
+
+build:docker:
+  stage: build
+  image: docker:stable
+  tags:
+    - docker
+  script:
+    - apk update && apk add make
+    - make docker
+
+
+####################################################################################################
+## Release
+####################################################################################################
+
+release:docker:
+  stage: release
+  image: docker:stable
+  tags:
+    - docker
+  script:
+    - apk update && apk add make
+    - make docker
+    - make docker_login
+    - make docker_release
