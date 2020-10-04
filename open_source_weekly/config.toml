@@ -1,0 +1,33 @@
+baseURL = "https://opensourceweekly.org"
+languageCode = "en-us"
+title = "Open Source Weekly"
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "taxonomyTerm", "tags"]
+enableGitInfo = true
+
+[author]
+  name = "Sylvain Kerkour"
+  email = "hello@fatalentropy.com"
+
+[markup.goldmark.renderer]
+  unsafe= true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+
+[params]
+  description = "A weekly newsletter of the best projects, people and articles on open source, curated by hand."
+  git = "https://gitlab.com/bloom42/open_source_weekly"
+  # storyHtml = """"""
+  obfuscatedEmail = '<n uers="znvygb:uryyb@sngnyragebcl.pbz">uryyb@sngnyragebcl.pbz</n>'
+
+
+[outputFormats.jsonfeed]
+  mediaType = "application/json"
+  baseName = "feed"
+  isPlainText = true
+
+[outputs]
+  home = ["HTML", "RSS", "jsonfeed"]

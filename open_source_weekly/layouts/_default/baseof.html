@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language }}">
+  {{ partial "head.html" . }}
+  <script>
+    function _redirect(siteBaseUrl) {
+      var baseUrl = window.location.origin.replace(/\/$/, '');
+      if (baseUrl != siteBaseUrl) {
+        location.href = '{{ .Site.BaseURL }}';
+      }
+    }
+    _redirect('{{ .Site.BaseURL }}'.replace(/\/$/, ''));
+    window.obfuscatedEmail = {{ .Site.Params.ObfuscatedEmail | safeHTML }};
+  </script>
+    <!-- js -->
+    <script src="{{ "js/jquery-3.4.1.min.js" | relURL }}"></script>
+    {{ with resources.Get "js/index.js" | minify }}
+    <script type="text/javascript">{{ .Content | safeJS }}</script>
+    {{ end }}
+  <body>
+    {{ partial "nav.html" . }}
+
+    {{ if .IsHome }}
+      <div class="jumbotron2">
+        <div class="text-center">
+          <h1 class="big-title"><i>{{ .Site.Title }}</i></h1>
+          <p><i>{{ .Site.Params.Description }}</i></p>
+        </div>
+      </div>
+    {{ end }}
+
+    <!-- Page Header -->
+    {{ block "header" .}}
+    {{ end }}
+    <main>
+      {{ block "main" . }} {{ end }}
+    </main>
+  </body>
+</html>
