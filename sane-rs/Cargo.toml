@@ -1,0 +1,16 @@
+[package]
+name = "sane"
+version = "0.2.1"
+authors = ["z0mbie42 <sylvain@kerkour.com>"]
+edition = "2018"
+homepage = "https://gitlab.com/bloom42/sane/sane-rs"
+repository = "https://gitlab.com/bloom42/sane/sane-rs.git"
+description = "SANE Serialization and Deserialization for Rust"
+keywords = ["bloom", "sane", "serde"]
+license = "Apache-2.0"
+
+[dependencies]
+serde = "1.0"
+
+[dev-dependencies]
+serde = { version = "1.0", features = ["derive"] }
