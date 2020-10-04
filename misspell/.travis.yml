@@ -1,0 +1,16 @@
+sudo: required
+language: rust
+services:
+  - docker
+
+rust:
+  - 1.33.0
+
+script:
+  - make test
+  - make build
+
+
+notifications:
+  email:
+    on_success: never
