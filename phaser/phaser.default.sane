@@ -1,0 +1,7 @@
+rust_env = "${RUST_ENV}"
+assets_folder = "assets"
+sentry_url = "${SENTRY_URL}"
+api_url = "${API_URL}"
+api_secret = "${API_SECRET}"
+data_folder = "reports"
+concurrency = 21

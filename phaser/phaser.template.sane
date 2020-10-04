@@ -1,0 +1,7 @@
+rust_env = "production"
+assets_folder = "assets"
+sentry_url = "XXX"
+api_url = "https://bloom.sh/api"
+api_secret = "XXX"
+data_folder = "reports"
+concurrency = 21

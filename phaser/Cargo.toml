@@ -1,0 +1,44 @@
+[package]
+name = "phaser"
+version = "0.7.1"
+authors = ["z0mbie42 <sylvain@kerkour.fr>"]
+edition = "2018"
+homepage = "https://bloom.sh/platform/phaser"
+repository = "https://gitlab.com/bloom42/phaser.git"
+description = "The cloud native security scanner ☁️"
+keywords = ["security", "bloom", "phaser", "scanner"]
+license = "AGPL-3.0"
+
+[dependencies]
+phaser_core = { path = "crates/core" }
+phaser_modules = { path = "crates/modules" }
+phaser_scanner = { path = "crates/scanner" }
+
+
+zip = "0.5"
+walkdir="2.2"
+clap = "2.33"
+uuid = { version = "0.7", features = ["serde", "v4"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_derive = "1.0"
+sentry = "0.17"
+regex = "1"
+sane = "0.2.1"
+reqwest = "0.9"
+slog = "2.4"
+slog-scope = "4.1"
+
+
+[profile.release]
+# for error tracking
+debug = true
+# lto = true
+
+[workspace]
+members = [
+    ".",
+    "crates/core",
+    "crates/modules",
+    "crates/scanner",
+]
