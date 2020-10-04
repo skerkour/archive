@@ -1,0 +1,19 @@
+[package]
+name = "flint"
+version = "2.2.0"
+authors = ["z0mbie42 <sylvain@kerkour.com>"]
+edition = "2018"
+homepage = "https://opensource.bloom.sh"
+repository = "https://github.com/bloom42/flint.git"
+description = "The filesystem linter"
+keywords = ["bloom", "lint", "linter", "fs", "ci"]
+license = "Apache-2.0"
+
+[dependencies]
+clap = "2.32"
+ignore = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+sane = "0.2"
+failure = "0.1"
+globset = "0.4.2"
+regex = "1"

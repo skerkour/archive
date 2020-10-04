@@ -1,0 +1,15 @@
+rules = [
+    {
+        pattern = "*",
+        type = "directory",
+        convention = "snake_case",
+    },
+    {
+        pattern = "*.rs",
+        convention = "snake_case",
+    },
+    {
+        pattern = "Cargo.toml",
+        convention = "pascal_case",
+    },
+]
