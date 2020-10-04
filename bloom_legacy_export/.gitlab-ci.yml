@@ -1,0 +1,14 @@
+variables:
+  # Go
+  GO_IMAGE: golang:latest
+
+
+build:
+  image: $GO_IMAGE
+  tags:
+    - docker
+  script:
+    - make all
+  artifacts:
+    paths:
+      - dist/
