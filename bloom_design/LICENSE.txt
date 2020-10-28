@@ -1,0 +1,9 @@
+Licensed under
+the CC BY-SA 4.0 license: https://creativecommons.org/licenses/by-sa/4.0/
+
+The Bloom and all associated services logos are owned by Sylvain Kerkour and distributed under
+the terms of the CC BY-SA 4.0 license: https://creativecommons.org/licenses/by-sa/4.0/
+
+Copyright (C) 2018-2019 Sylvain kerkour
+
+Contact: sylvain@kerkour.fr
