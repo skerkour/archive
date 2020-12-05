@@ -1,0 +1,10 @@
+# [source.crates-io]
+# replace-with = "vendored-sources"
+#
+# [source."https://github.com/graphql-rust/juniper"]
+# git = "https://github.com/graphql-rust/juniper"
+# rev = "f3170c7adf4405cc119d2129f78a591fe2fcd32b"
+# replace-with = "vendored-sources"
+#
+# [source.vendored-sources]
+# directory = "vendor"

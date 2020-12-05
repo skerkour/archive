@@ -1,0 +1,38 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update local toolchain
+        run: |
+          rustup update
+          rustup component add clippy
+
+      - name: Toolchain info
+        run: |
+          cargo --version --verbose
+          rustc --version
+          cargo clippy --version
+
+
+      - name: Lint
+        run: |
+          make lint
+
+      - name: Test
+        run: |
+          make test
+
+      - name: Build
+        run: |
+          make docker
+
+      - name: Docker image info
+        run: |
+          docker images

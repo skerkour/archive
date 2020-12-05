@@ -1,0 +1,12 @@
+tmp/
+assets/GeoLite2-City.mmdb
+.env
+.env.local
+.env.*.local
+.tmp/
+dist/
+
+
+# Added by cargo
+
+/target
