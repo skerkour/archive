@@ -1,0 +1,69 @@
+{
+  "hosting": {
+    // Drops `.html` from uploaded URLs
+    "cleanUrls": true,
+    // Removes trailing slashes from URLs
+    // "trailingSlash": false,
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      ".git/",
+      ".git*"
+    ],
+    "redirects": [
+      {
+        "source": "https://www.fatalentropy.com/:path*",
+        "destination": "https://fatalentropy.com/:path",
+        "type": 301
+      },
+      {
+        "source": "/blog/:post*",
+        "destination": "/:post",
+        "type": 301
+      },
+      {
+        "source": "/index.xml",
+        "destination": "/feed.xml",
+        "type": 301
+      }
+    ],
+    "headers": [
+      // for HTML page, we ask to keep them long term in CDN, but not in browser cache
+      // 31536000 s = 1 year
+      // firebase CDN ignore (thanksfully) Cahce-control no-cache?? (i'm not sure)
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            // "value": "public, max-age=0, no-cache, must-revalidate, s-maxage=31536000"
+            "value": "public, max-age=0, s-maxage=31536000"
+            // "value": "public, max-age=0, must-revalidate, s-maxage=31536000"
+          }
+        ]
+      },
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            // "value": "public, max-age=0, no-cache, must-revalidate, s-maxage=31536000"
+            "value": "public, max-age=0, s-maxage=31536000"
+            // "value": "public, max-age=0, must-revalidate, s-maxage=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|css|js|png|jpg|jpeg|gif|tiff)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, s-maxage=31536000"
+          }
+        ]
+      }
+    ]
+  }
+}

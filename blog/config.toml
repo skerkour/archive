@@ -1,0 +1,36 @@
+baseURL = "https://fatalentropy.com"
+languageCode = "en-us"
+title = "Fatal Entropy"
+disableHugoGeneratorInject = true
+enableGitInfo = true
+
+[author]
+  name = "Sylvain Kerkour"
+  # email = "sylvain@kerkour.fr"
+  email = "hello@fatalentropy.com"
+
+[markup.goldmark.renderer]
+  unsafe= true
+
+[taxonomies]
+  # category = "categories"
+  tag = "tags"
+  author = "authors"
+
+[params]
+  description = "Strong opinions and crazy ideas on open source, minimalism, sustainability and everything in between. By Sylvain Kerkour, creator of Bloom."
+  git = "https://github.com/bloom42/blog"
+  ogimage = "https://www.fatalentropy.com/imgs/og_image.jpg"
+
+
+[outputFormats.jsonfeed]
+  mediaType = "application/json"
+  baseName = "feed"
+  isPlainText = true
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"
+
+[outputs]
+  home = ["HTML", "RSS", "jsonfeed"]

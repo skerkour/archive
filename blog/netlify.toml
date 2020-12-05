@@ -1,0 +1,71 @@
+[Settings]
+
+[build]
+  publish = "public/"
+
+
+# 2592000 seconds = 30 days
+# 1296000 s = 15 d
+# 604800 s = 7 d
+# 259200 s = 3d
+# 172800 s = 2d
+
+#[[headers]]
+#  for = "/*"
+#  [headers.values]
+#    # Netlify's CDN, unfortunately respects no-cache
+#    # must-revalidate,
+#    Cache-Control = '''
+#    public,
+#    max-age=0,
+#    must-revalidate,
+#    s-maxage=172800
+#    '''
+
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    cache-control = '''
+    public,
+    max-age=3600,
+    s-maxage=172800
+    '''
+
+[[headers]]
+  for = "/about"
+  [headers.values]
+    cache-control = '''
+    public,
+    max-age=0,
+    s-maxage=172800
+    '''
+
+
+
+####################################################################################################
+### www.fatalentropy.com
+####################################################################################################
+
+# [[redirects]]
+#   from = "https://bloom42-blog.netlify.app/*"
+#   to = "https://www.fatalentropy.com/:splat"
+#   status = 301
+#   force = true
+
+
+[[redirects]]
+  from = "https://fatalentropy.com/*"
+  to = "https://www.fatalentropy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/index.xml"
+  to = "/feed.xml"
+  status = 301
